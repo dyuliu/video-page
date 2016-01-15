@@ -1,0 +1,341 @@
+<section data-ng-controller="IndexController">
+	
+	<header>
+		
+		<div id="header-top-container">
+			<div id="header-top">
+				
+				<div id="header-top-left">
+					<ul class="sf-menu">
+						<li class="current-menu-item"><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+						<li><a href="about.html">About</a></li>
+				</div><!-- close #header-top-left -->
+
+				<div class="clearfix"></div>
+			</div><!-- close #header-top -->
+		</div><!-- close #header-top-container -->
+		
+		
+		
+		<div id="header-gradient">
+			
+			<div id="header-logo-container">
+				<div id="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+				
+				<!--<div id="header-logo-right">-->
+					<!--<form method="get" class="searchform" action="">-->
+						<!--<label for="s" class="assistive-text">Search</label>-->
+						<!--<input type="text" class="field" name="s" id="s" placeholder="Search" />-->
+						<!--<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />-->
+					<!--</form>-->
+					
+				<!--</div>-->
+			
+			<div class="clearfix"></div>
+			</div><!-- close #header-logo-container -->
+			
+			<div id="navigation-narrow">
+				<nav>
+					<ul class="sf-menu">
+						<li class="current-menu-item"><a href="index.html">Home</a>
+						</li>
+                        <li><a href="projects.html">Projects</a>
+							<ul>
+                                <li><a href="three-column-portfolio.html">VisMOOC</a></li> 
+                                <li><a href="three-column-portfolio.html">GraphVis</a></li>
+                                <li><a href="three-column-portfolio.html">UrbanVis</a></li>
+                                <li><a href="three-column-portfolio.html">Others</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</nav>
+			</div><!-- close #navigation-narrow -->
+
+		</div><!-- close #header-gradient -->
+		
+	</header>
+	
+	
+	<div id="main" role="main">	
+		
+		<div class="bread-crumbs"></div>
+		<!--div class="bread-crumbs"><span>You are here:</span>  <a href="#">Home</a> &rsaquo; About us</div-->
+		
+		<div class="content-container">
+			
+			<div id="showcase" class="showcase">
+				
+				<!-- START SLIDE .showcase-slide-->
+				<div class="showcase-slide">
+					<div class="showcase-content">
+						<div class="slider-left">
+                            <video width="560" height="315" controls preload="none">
+                                <source src="videos/egoslider.mp4" type="video/mp4">
+                            </video>
+						</div><!-- close .slider-left -->
+						<div class="slider-right">
+                            <h2><a href="/#!/project-single?id=1">egoSlider</a></h2>
+                            <div class="post-details-slider">by <a href="#">Yanhong Wu</a> on <a href="#">Jan 14, 2016</a></div>
+						</div><!-- close .slider-right -->
+					</div>
+				</div>
+				<!-- END SLIDE .showcase-slide-->
+				
+			</div><!-- END SHOWCASE -->
+			<script type="text/javascript">
+				jQuery(function()
+				{
+					$("#showcase").awShowcase(
+					{
+						content_width:			920,
+						content_height:			320,
+						fit_to_parent:			false,
+						auto:					true,
+						interval:				8000,
+						continuous:				false,
+						loading:				true,
+						tooltip_width:			200,
+						tooltip_icon_width:		32,
+						tooltip_icon_height:	32,
+						tooltip_offsetx:		18,
+						tooltip_offsety:		0,
+						arrows:					true,
+						buttons:				true,
+						btn_numbers:			true,
+						keybord_keys:			true,
+						mousetrace:				false, /* Trace x and y coordinates for the mouse */
+						pauseonover:			true,
+						stoponclick:			true,
+						transition:				'fade', /* hslide/vslide/fade */
+						transition_delay:		0,
+						transition_speed:		300,
+						show_caption:			'onload', /* onload/onhover/show */
+						thumbnails:				false,
+						thumbnails_position:	'outside-last', /* outside-last/outside-first/inside-last/inside-first */
+						thumbnails_direction:	'vertical', /* vertical/horizontal */
+						thumbnails_slidex:		1, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+						dynamic_height:			false, /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set the dimension of the first slide in the showcase. */
+						speed_change:			true, /* Set to true to prevent users from swithing more then one slide at once. */
+						viewline:				false, /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you need to set the width and height of images in the source. */
+						custom_function:		null /* Define a custom function that runs on content change */
+					});
+				});
+				
+			</script>
+			
+			
+			
+		</div><!-- close .content-container -->
+		<div class="content-container-base-pagination"></div><!-- close .content-container-base or .content-container-base-pagination -->
+		
+		<div class="content-container">
+			
+			<div class="tabs">
+		        <ul class="tabNavigation">
+		            <li><a href="#latest-videos">Latest Videos</a></li>
+					<div class="clearfix"></div>
+		        </ul>
+		        <div id="latest-videos">
+				    <div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://www.youtube.com/watch?v=kIl-C8ZFJmg" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio1.png" width="202" height="152" alt="" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Moto TF Ride Day</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="images/demo-content/large1.jpg" rel="prettyPhoto[gallery1]" title="" class="photo-icon">Photo</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio2.jpg" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Photo - Yosemite Park</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://vimeo.com/21120050" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio3.png" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Inner Secrets - Rear Wing</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column lastcolumn">
+						<div class="portfolio-list">
+							<iframe src="http://player.vimeo.com/video/6686768?title=0&amp;byline=0&amp;portrait=0" width='202' height='152' frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<h5><a href="/#!/project-single?id=1">Inline Video Example</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="clearfix"></div>
+
+					<div class="grid4column">
+
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://trailers.apple.com/movies/universal/despicableme/despicableme-tlr1_r640s.mov?width=640&height=360" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio4.png" width="202" height="152" alt="" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Quicktime Video</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="images/demo-content/large2.jpg" rel="prettyPhoto[gallery1]" title="" class="photo-icon">Photo</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio5.jpg" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Photo - Cold Desert</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://www.youtube.com/watch?feature=player_embedded&v=gxTuEC8RMzE" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio6.png" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Nitro Circus</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column lastcolumn">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://www.youtube.com/watch?v=P8FlmTlmdzc&feature=pyv" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio7.png" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Pacific Northwest</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="clearfix"></div>
+
+
+					<div class="grid4column">
+
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://vimeo.com/35083232" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio8.png" width="202" height="152" alt="" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">3 Days in Dubai</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://vimeo.com/35396305" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio9.jpg" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Yosemite HD</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://www.youtube.com/watch?v=qQ48NQjouoE" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio10.png" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Gymkhana 2.1</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="grid4column lastcolumn">
+						<div class="portfolio-list">
+						<div class="gallery-hover">
+							<div class="icon-container">
+								<a href="http://vimeo.com/34783883" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
+								<a href="/#!/project-single?id=1" class="page-icon">Page</a>
+							</div>
+							<img src="images/demo-content/portfolio11.png" width="202" height="152" alt="" class="transparent-icon" />
+						</div>
+						<h5><a href="/#!/project-single?id=1">Marina Bay Sands Skypark</a></h5>
+						<p>by Mike on Jun 30 2011</p>
+						</div><!-- close .portfolio-list -->
+					</div>
+					<div class="clearfix"></div>
+
+					<div class="home-page-older"><a href="#">Older Entries &rsaquo;</a></div>
+
+				</div>
+		    </div><!-- close .tabs -->
+			
+			
+			<div class="clearfix"></div>
+		</div><!-- close .content-container -->
+		<div class="content-container-base-pagination">
+			<div class="left-pagination"><a href="#"></a></div>
+			<div class="right-pagination"></div>
+			<div class="center-pagination"></div>
+			<div class="clearfix"></div>
+		</div><!-- close .content-container-base or .content-container-base-pagination -->
+		
+	</div><!-- close #main -->
+	
+	
+	
+	<div id="footer-gradient"></div>
+	<footer>
+		
+		<div id="footer-base">
+			<div id="footer-base-content">
+                <div id="copyright-footer">HKUST VisLab &copy 2016 All rights reserved.</div>
+				<div id="footer-navigation">
+					<ul>
+						<li class="current-menu-item"><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+					</ul>
+				</div>
+			
+			<div class="clearfix"></div>
+			</div><!-- close #footer-base-content -->
+			
+		</div>
+		
+	</footer>
+	
+</section>

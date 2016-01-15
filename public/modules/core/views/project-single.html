@@ -1,0 +1,214 @@
+<section data-ng-controller="ProjectSingleController">
+
+	<header>
+		
+		<div id="header-top-container">
+			<div id="header-top">
+				
+				<div id="header-top-left">
+					<ul class="sf-menu">
+						<li><a href="/#!/">Home</a></li>
+                        <li class="current-menu-item" ><a href="projects.html">Projects</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div><!-- close #header-top-left -->
+				
+				<div class="clearfix"></div>
+			</div><!-- close #header-top -->
+		</div><!-- close #header-top-container -->
+		
+		
+		
+		<div id="header-gradient">
+			
+			<div id="header-logo-container">
+				<div id="logo"><a href="/#!/"><img src="images/logo.png" alt="Logo"></a></div>
+				
+				<!--<div id="header-logo-right">-->
+					<!--<form method="get" class="searchform" action="">-->
+						<!--<label for="s" class="assistive-text">Search</label>-->
+						<!--<input type="text" class="field" name="s" id="s" placeholder="Search" />-->
+						<!--<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />-->
+					<!--</form>-->
+					
+				<!--</div>-->
+			
+			<div class="clearfix"></div>
+			</div><!-- close #header-logo-container -->
+			
+			<div id="navigation-narrow">
+				<nav>
+					<ul class="sf-menu">
+						<li><a href="/#!/">Home</a></li>
+                        <li class="current-menu-item" ><a href="projects.html">Projects</a>
+							<ul>
+                                <li><a href="three-column-portfolio.html">VisMOOC</a></li> 
+                                <li><a href="three-column-portfolio.html">GraphVis</a></li>
+                                <li><a href="three-column-portfolio.html">UrbanVis</a></li>
+                                <li><a href="three-column-portfolio.html">Others</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</nav>
+			</div><!-- close #navigation-narrow -->
+
+		</div><!-- close #header-gradient -->
+		
+	</header>
+	
+	
+	<div id="main" role="main">	
+		
+		
+        <div class="bread-crumbs"><span>You are here:</span>  <a
+                href="/#!/">Home</a> &rsaquo; <a
+                href="portfolio.html">Projects</a> &rsaquo; egoSlider</div>
+		
+		
+		<div class="content-container">
+			
+			
+				
+			<div class="page-content">
+				
+				<ul class="sub-pagination">
+					<li class="current-menu-item"><a href="projects.html">Back to the Projects</a></li>
+				</ul>
+				
+				
+				
+					
+                <h1 class="page-title">egoSlider: Visual Analysis of Egocentric Network Evolution</h1>
+				
+				<div class="project-single">
+					
+					
+                    
+                    <!-- <video width="900" height="510" controls preload="none">
+                        <source src="videos/egoslider.mp4" type="video/mp4">
+                    </video> -->
+
+                    <videogular vg-player-ready="vgPlayerReady($API)" vg-theme="config.theme" vg-update-time="vgUpdateTime($currentTime)">
+						<vg-media vg-src="config.sources" vg-tracks="config.tracks">
+						</vg-media>
+			 
+						<vg-controls vg-autohide="config.plugins.controls.autoHide" vg-autohide-time="config.plugins.controls.autoHideTime" style="bottom: 7px;">
+							<vg-play-pause-button></vg-play-pause-button>
+							<vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+							<vg-scrub-bar>
+								<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+							</vg-scrub-bar>
+							<vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+							<vg-volume>
+								<vg-mute-button></vg-mute-button>
+								<vg-volume-bar></vg-volume-bar>
+							</vg-volume>
+							<vg-playback-button></vg-playback-button>
+							<vg-fullscreen-button></vg-fullscreen-button>
+						</vg-controls>
+			 
+						<vg-overlay-play></vg-overlay-play>
+					</videogular>
+
+						
+					
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('#slider').anythingSlider({
+							delay               : 3500,      // How long between slideshow transitions in AutoPlay mode (in milliseconds)
+							animationTime       : 400,       // How long the slideshow transition takes (in milliseconds)
+							buildArrows         : false,      // If true, builds the forwards and backwards buttons
+							buildNavigation     : true,      // If true, buildsa list of anchor links to link to each panel
+							autoPlay            : true,      // This turns off the entire slideshow FUNCTIONALY, not just if it starts running or not
+							hashTags            : false,      // Should links change the hashtag in the URL?
+							resizeContents      : true,
+							addWmodeToObject    : 'transparent',
+							startStopped        : false,     // If autoPlay is on, this can force it to start stopped
+							pauseOnHover        : true,      // If true & the slideshow is active, the slideshow will pause on hover
+							resumeOnVideoEnd    : true      // If true & the slideshow is active & a youtube video is playing, it will pause the autoplay until the video has completed
+						});
+					});
+					</script>
+					
+					
+                    <div class="portfolio-details">by <a href="#">Yanhong Wu</a>
+                        on <a href="#">Jan 14, 2016</a></div>
+
+					<p>Ego-network, which represents relationships between a
+                    specific individual, i.e., the ego, and people connected to
+                    it, i.e., alters, is a critical target to study in social
+                    network analysis. Evolutionary patterns of ego-networks
+                    along time provide huge insights to many domains such as
+                    sociology, anthropology, and psychology. However, the
+                    analysis of dynamic ego-networks remains challenging due to
+                    its complicated time-varying graph structures, for example:
+                    alters come and leave, ties grow stronger and fade away, and
+                    alter communities merge and split. Most of the existing
+                    dynamic graph visualization techniques mainly focus on
+                    topological changes of the entire network, which is not
+                    adequate for egocentric analytical tasks. In this paper, we
+                    present egoSlider, a visual analysis system for exploring
+                    and comparing dynamic ego-networks. egoSlider provides a
+                    holistic picture of the data through multiple interactively
+                    coordinated views, revealing ego-network evolutionary
+                    patterns at three different layers: a macroscopic level for
+                    summarizing the entire ego-network data, a mesoscopic level
+                    for overviewing specific individuals’ ego-network
+                    evolutions, and a microscopic level for displaying detailed
+                    temporal information of egos and their alters. We
+                    demonstrate the effectiveness of egoSlider with a usage
+                    scenario with the DBLP publication records. Also, a
+                    controlled user study indicates that in general egoSlider
+                    outperforms a baseline visualization of dynamic networks for
+                    completing egocentric analytical tasks.</p>
+					
+					<div class="clearfix"></div>
+					<hr/>
+					
+                    <div class="portfolio-tags"><strong>Tags</strong>: <a href="#">graph</a></div><!-- close .portfolio-tags -->
+					
+					<div class="clearfix"></div>
+					
+				</div><!-- close .project-single -->
+	
+			</div><!-- close .page-content -->
+			
+			
+			
+			
+			<div class="clearfix"></div>
+				
+			
+		</div><!-- close .content-container -->
+	
+	</div><!-- close #main -->
+	
+	
+	
+	<div id="footer-gradient"></div>
+	<footer>
+		<div class="footer-content">
+			
+		<div class="clearfix"></div>
+		</div><!-- close .footer-content -->
+		
+		<div id="footer-base">
+			<div id="footer-base-content">
+                <div id="copyright-footer">HKUST VisLab &copy 2016 All rights reserved.</div>
+				<div id="footer-navigation">
+					<ul>
+						<li><a href="#">Home</a></li>
+                        <li class="current-menu-item"><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+					</ul>
+				</div>
+			
+			<div class="clearfix"></div>
+			</div><!-- close #footer-base-content -->
+			
+		</div>
+		
+	</footer>
+</section>

@@ -1,0 +1,2172 @@
+/*
+Theme Name: Primero
+Theme URI: http://progressionstudios.com/
+Description: Site Template for Video
+Version: 1.3
+Author: ProgressionStudios
+Author URI: http://themeforest.net/user/ProgressionStudios/profile?ref=ProgressionStudios
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*  Table of Contents 
+01. HTML5 ✰ BOILERPLATE RESET FILE
+02. LATO FONT-FACE KIT
+03. COMMONLY ADJUSTED STYLES
+04. PRIMARY STYLES
+	A. HEADER STYLES
+	B. FOOTER STYLES
+	C. SEARCH FORM STYLES
+	D. PORTFOLIO STYLES
+	E. COLUMNS
+05. BLOG STYLES
+	A. BLOG COMMENTS
+06. SIDEBAR STYLES
+07. STAR RATING
+08. CONTACT STYLES
+09. WIDGET STYLES
+10. HOMEPAGE SLIDER
+	A. NAVIGATION ARROWS
+	B. VERTICAL CAPTION
+	C. SLIDESHOW BULLETS
+	D. VERTICAL THUMBNAILS
+11. PORTFOLIO SLIDER
+	A. DIMENSIONS OF SLIDER
+	B. SLIDER COLORS
+	C. COMMON SLIDER SETTING
+12. REGULAR SHORTCODE SLIDER
+11. TABS
+	A. HOMEPAGE TABS
+	B. PAGE TABS
+13. NAVIGATION STYLES
+	1a. NARROW NAVIGATION SKIN
+	2a. WIDE NAVIGATION SKIN
+	3a. NARROW DARK NAVIGATION SKIN
+	4a. WIDE NAVIGATION SKIN 
+17. MEDIA QUERIES
+18. PRINT STYLES
+19. LIGHTBOX STYLES
+*/
+
+
+/*
+=============================================== 01. HTML5 ✰ BOILERPLATE RESET FILE ===============================================
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, 
+ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
+tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, 
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+blockquote, q { quotes: none; } 
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; } 
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+input, select { vertical-align: middle; } 
+pre, code, kbd, samp { font-family: monospace, sans-serif; } 
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; } 
+small { font-size: 85%; } 
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }  
+sup { top: -0.5em; } 
+sub { bottom: -0.25em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea { overflow: auto; }
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+
+/* Clear Fix
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; display:block;overflow:hidden;visibility:hidden;width:0;height:0;}*/
+.clearboth, .clearfix {clear: both;}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+
+
+/*
+=============================================== 02. LATO FONT-FACE KIT ===============================================
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:900,700italic,400,400italic,700);
+
+h1, h2, h3, h4, h5, h6, nav a, ul.tabNavigation, .more-link-slider span, .post-details-slider, .button, .portfolio-details, .blog-details, .blog-pagination, .content-container-base-pagination, .home-page-older {
+	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
+
+/*
+=============================================== 03. COMMONLY ADJUSTED STYLES ===============================================
+*/
+/* -------------------- A. HEADER/FOOTER BACKGROUND COLORS -------------------- */
+header, #header-top .sf-menu li li {background-color:#454a52;} /* BACKGROUND COLORS */
+footer {background-color:#454a52;} /* BACKGROUND COLORS */
+
+/* -------------------- B. HEADING COLORS -------------------- */
+h2, h3, h4, h5, h6 {font-weight:700; color:#7f7f7f;}
+h1 { font-weight:900; color:#7f7f7f; font-size:28px; line-height:26px; margin-bottom:12px;}
+h2 {font-size:24px; line-height:22px; margin-bottom:10px;}
+h3 {font-size:16px; line-height:22px; margin-bottom:10px;}
+h4 {font-size:15px; line-height:20px; margin-bottom:8px;}
+h5 {font-size:13px; line-height:18px; margin-bottom:5px;}
+h6 {font-size:11px; line-height:15px; margin-bottom:3px;}
+h1.page-title {background:url(images/dotted-line.png) bottom left repeat-x; padding-bottom:14px; margin-bottom:20px;}
+
+/* -------------------- C. FOOTER HEADING COLORS -------------------- */
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {color:#fff; background:url(images/footer-heading-bg.png) bottom left repeat-x; padding-bottom:9px; margin-bottom:15px;}
+
+/* -------------------- D. BODY AND LINK COLORS -------------------- */
+body { 
+	font-size:12px;
+	line-height:20px;
+	min-width:1000px;
+	font-family:"Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	background:#e8e8e8 url(images/background.png) top left repeat;
+	color:#919191;
+}
+a {text-decoration:none; color:#7f7f7f;} /* Default link  */
+a:hover {text-decoration:underline; } /* Default link:hover*/
+
+
+
+/*
+=============================================== 04. PRIMARY STYLES ===============================================
+*/
+a {
+	-webkit-transition-duration: 200ms;
+	-webkit-transition-property: color;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-duration: 200ms;
+	-moz-transition-property: color;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-duration: 200ms;
+	-o-transition-property: color;
+	-o-transition-timing-function: ease-in-out;
+	} /* Default link  (Color is controlled above but this can override it)  */
+* { margin: 0; outline: none; }
+select, input, textarea, button { font:99% sans-serif; }
+a:hover, a:active { outline: none; }
+ul, ol { margin-left: 2em; margin-bottom:20px; }
+ol { list-style-type: decimal; }
+p {padding-bottom:18px;}
+#main img, .portfolio-single iframe, #slider, #slider-2, .blog-featured-image iframe { -moz-box-shadow: 0 1px 12px #aaa; -webkit-box-shadow: 0 1px 12px #aaa; box-shadow:  0 1px 12px #aaa; -webkit-transition-duration: 300ms; -webkit-transition-property: shadow; -webkit-transition-timing-function: ease; -moz-transition-duration: 300ms; -moz-transition-property: shadow; -moz-transition-timing-function: ease; -o-transition-duration: 300ms; -o-transition-property: shadow; -o-transition-timing-function: ease;}
+#main a:hover img {-moz-box-shadow: 0 1px 12px #888; -webkit-box-shadow: 0 1px 12px #888; box-shadow:  0 1px 12px #888;}
+.noborder, .noborder a:hover, .portfolio-single .social-networking-portfolio iframe, #slider iframe, #slider img, #slider a:hover img {-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:  none;}
+.alignleft {float:left;margin:0 15px 0 0;}
+.alignright {float:right; margin:0 0 0 15px;}
+.aligncenter {  text-align:center; display:block; margin:0 auto 12px auto;}
+
+#main {padding-top:24px;}
+.bread-crumbs {width:900px; margin:0 auto 6px auto; font-size:11px; height:15px; }
+.bread-crumbs a {color:#828282;}
+.bread-crumbs a:hover {color:#6b6b6b; text-decoration:none;}
+.bread-crumbs span {color:#a5a5a5;}
+.content-container {background:url(images/content-bg.png) top left no-repeat; width:952px; margin:0 auto; }
+.content-container-base, .content-container-base-pagination { height:45px; width:952px; overflow:hidden; margin:0 auto 25px auto;}
+.content-container-base-pagination, .home-page-older {font-weight:700; font-style:italic;}
+.ie7 .home-page-older {display:none !important;}
+.home-page-older {float:right; margin-bottom:-25px; position:relative; top:9px; font-size:13px;}
+.content-container-base {background:url(images/content-bg-base.png) top left no-repeat;}
+.content-container-base-pagination {background:url(images/content-bg-base-pagination.png) top left no-repeat;}
+.left-pagination {float:left; font-size:13px; margin:9px 24px;}
+.right-pagination {float:right; font-size:13px; margin:9px 24px;}
+.center-pagination {display:block; margin:0 auto; text-align:center; padding:10px 0px 0px 0px; }
+.center-pagination a {background: #fff url(images/pagination-background.png) top left repeat-x; border:1px solid #d0d0d0; padding:3px 8px; margin-right:4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.center-pagination a:hover {text-decoration:none; background: #fff url(images/pagination-background.png) bottom left repeat-x;}
+.center-pagination a.selected {background: #fff url(images/pagination-background.png) bottom left repeat-x;}
+.button, body input#submit, body #main .sidebar input.wpcf7-submit, input.wpcf7-submit, body footer .wpcf7 input.wpcf7-submit {font-weight:900;  position: relative; cursor: pointer; text-decoration: none;
+	background-color:#f8f8f8;
+	background-image: url(images/button-gradient.png);
+	background-position:top left;
+	background-repeat: repeat-x;
+	display: inline-block;
+	padding: 10px 14px;
+	line-height: 1;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 0 #d2d2d2;
+	-webkit-box-shadow: 0 1px 0 #d2d2d2;
+	box-shadow:  0 1px 0 #d2d2d2;
+	border-top:1px solid #dcdcdc;
+	border-left:1px solid #d4d4d4;
+	border-right:1px solid #d6d6d6;
+	border-bottom:1px solid #bababa;
+}
+.button:hover, body input#submit:hover, body #main .sidebar input.wpcf7-submit:hover, input.wpcf7-submit:hover, body footer .wpcf7 input.wpcf7-submit:hover {background-position:bottom left; text-decoration:none;}
+.page-content {width:900px; margin:0 auto; padding-top:35px; }
+.team-member {padding:10px 0px 20px 0px;}
+.team-member img {-moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow:  none !important;}
+ul.sub-pagination {list-style:none; margin:11px 0 0 0; padding:0; font-size:12px; float:right;}
+ul.sub-pagination li {list-style:none; display:inline; margin-left:15px;}
+ul.sub-pagination li a {color:#acacac;}
+ul.sub-pagination li.current-menu-item a, ul.sub-pagination li a:hover {color:#666; text-decoration:none;}
+hr {background:url(images/dotted-line.png) top left repeat-x; height:1px; border:none; margin:10px 0 30px 0;}
+.ie7 hr {border:1px dotted #ccc; background:transparent; height:0px;  margin:10px 0 30px 0;}
+.page-description {font-size:13px; }
+blockquote {font-style:italic; line-height:24px; font-size:13px; background:url(images/blockquote.png) 15px 9px no-repeat; padding:5px 0 0 50px; margin-bottom:20px;}
+ul.checkmark, ul.arrow {margin-left:5px;}
+ul.checkmark li { margin-left:0px; background:url(images/checkmark.png) 2px 4px no-repeat; padding:0 0 2px 20px; list-style:none;}
+ul.arrow li { margin-left:0px; background:url(images/sidebar-arrow.png) 3px 4px no-repeat; padding:0 0 2px 20px; list-style:none;}
+h1#error404 {margin:0 auto; text-align:center; padding:125px 0;}
+.wp-caption, .wp-caption-text, .sticky, .gallery-caption, .bypostauthor {}
+
+/* -------------------- A. HEADER STYLES -------------------- */
+header { color:#cdcdcd; background-image:url(images/header-background.png); background-position:bottom left; background-repeat: repeat-x;}
+#header-top-container {background:url(images/header-top-background.png) bottom left repeat-x;}
+#header-gradient {background:url(images/header-gradient.png) bottom center no-repeat;}
+#header-top {margin: 0 auto; width:940px; font-size:11px; text-shadow:0px 1px 2px #303030; }
+#header-top-left {float:left; position:relative; z-index:100;}
+#header-top-right {float:right;}
+#header-logo-container {width:940px; margin:0 auto;}
+header #header-top ul, header #header-gradient ul {margin:0px;}
+header #logo {float:left; margin:0px 0px 0px 0px;}
+#header-logo-right {float:right; margin:30px 0px 0px 0px;}
+#header-top-right .social-icons {display:inline-block; margin:6px 0px 3px 0px;}
+#header-top-right .social-icons span {position:relative; bottom:6px; padding-right:5px;}
+.advertisement {margin:10px 0px 0px 0px;}
+.advertisement img {background:url(images/advertisement.png); padding:4px;}
+
+/* -------------------- B. FOOTER STYLES -------------------- */
+#footer-gradient {margin-top:4px; height:39px; background:url(images/footer-gradient.png);}
+footer {color:#bebebe; background-image:url(images/footer-background.png); background-position: 0px -1px; background-repeat:repeat-x;}
+#footer-base {font-size:11px; background:url(images/footer-base.png) top left repeat-x; padding:22px 0px; }
+footer a {color:#e1e1e1;}
+footer a:hover, #footer-navigation  ul li.current-menu-item a {color:#fff; text-decoration:none;}
+#footer-base a {font-weight:bold;}
+.footer-content, #footer-base-content {width:940px; margin:0 auto;}
+.footer-content .grid4column {padding-top:35px; padding-bottom:35px;}
+#copyright-footer {float:left;}
+#footer-navigation {float:right;}
+#footer-navigation  ul {margin:0px; padding:0px;}
+#footer-navigation  ul li {list-style:none; padding:0px; display:inline; margin-left:30px;}
+.footer-content ul {margin:0px;}
+.footer-content ul li {list-style:none; margin-left:0px; padding-left:0px;}
+.footer-content ul li a {display:block; padding:0 0 16px 16px; background:url(images/footer-list.png) 0px 5px no-repeat;}
+
+
+footer ul#recentcomments li {border-bottom:1px solid #555; padding:5px 0px 5px; }
+footer ul#recentcomments li:first {padding-top:0px; }
+footer ul#recentcomments li a {display:inline; background:transparent; padding:0px;}
+footer ul#recentcomments li a:hover {background:transparent;}
+
+
+/* -------------------- C. SEARCH FORM STYLES -------------------- */
+.searchform { margin:25px 0 25px 0px; }
+#s {
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-property: width, background;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-duration: 400ms;
+	-moz-transition-property: width, background;
+	-moz-transition-timing-function: ease;
+	-o-transition-duration: 400ms;
+	-o-transition-property: width, background;
+	-o-transition-timing-function: ease;
+	width: 145px;
+	padding:7px 7px 5px 30px;
+	border:1px solid #ffffff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background:url(images/search.png) 9px 6px no-repeat;
+	-moz-box-shadow: inset 0px 1px 6px #b5b4b4;
+	-webkit-box-shadow:inset 0px 1px 6px #b5b4b4;
+	box-shadow:inset  0px 1px 6px #b5b4b4;
+	background-color:#fff;
+	font-size:13px;
+	color:#6d6d6d;
+
+}
+#s:focus {
+	width: 200px;
+	-moz-box-shadow: inset 0px 1px 6px #d5d5d5;
+	-webkit-box-shadow:inset 0px 1px 6px #d5d5d5;
+	box-shadow:inset  0px 1px 6px #d5d5d5;
+}
+.sidebar #s:focus {width:180px;}
+footer  #s:focus {width:160px;}
+.ie8 #s, .ie8 .sidebar-container #s, footer #s {width:145px;}
+#searchsubmit, .assistive-text, .screen-reader-text { display: none; }
+
+/* -------------------- D. PORTFOLIO STYLES -------------------- */
+.portfolio-list iframe, .portfolio-list .video-js-box, .portfolio-list .projekktor, .portfolio-list iframe:hover, .portfolio-list .video-js-box:hover, .portfolio-list .projekktor:hover {z-index:55 !important; position:relative;}
+.ie7 .portfolio-list iframe, .ie7 .portfolio-list .video-js-box, .ie7 .portfolio-list .projekktor, .portfolio-list iframe:hover, .ie7 .portfolio-list .video-js-box:hover, .ie7 .portfolio-list .projekktor:hover {z-index:1000 !important; position:relative;}
+.ie8 .portfolio-list iframe, .ie8 .portfolio-list .video-js-box, .ie8 .portfolio-list .projekktor, .portfolio-list iframe:hover, .ie8 .portfolio-list .video-js-box:hover, .ie8 .portfolio-list .projekktor:hover {z-index:1100 !important; position:relative;}
+.portfolio-list {font-size:11px; padding-bottom:25px; position:relative; z-index:20;}
+.portfolio-list h5 {margin:5px 0 0 0;}
+.gallery-hover {position:relative;  z-index:20;}
+.icon-container {position:absolute; background: url(images/icon-container.png); width:202px; height:152px;  z-index:20; display:block; text-align:center;}
+.video-icon {display:block; width:28px; height:28px; background:url(images/video-icon.png); text-indent:-99999px; margin:0 auto; float:left; margin-top:62px; margin-left:64px; }
+.video-icon:hover, .photo-icon:hover, .page-icon:hover {background-position:bottom left;}
+.photo-icon {display:block; width:28px; height:28px; background:url(images/photo-icon.png); text-indent:-99999px; margin:0 auto; float:left; margin-top:62px; margin-left:64px }
+.page-icon {display:block; width:28px; height:28px; background:url(images/page-icon.png); text-indent:-99999px; margin:0 auto;  float:right; margin-top:62px; margin-right:64px;}
+.rating-container {position:absolute; z-index:6; bottom:10px; background:#fff;}
+.portfolio-single {padding:4px 0 15px 0;}
+.ie7 .portfolio-single .alignright {float:right; width:500px; overflow:hidden;}
+.ie7 .portfolio-single-small-left {float:left; width:360px; }
+.portfolio-single img {margin-bottom:12px;}
+.portfolio-single iframe {margin-bottom:18px;}
+.portfolio-details {margin:10px 0 10px 0; color:#a2a2a2;}
+.portfolio-tags {float:left;}
+.social-networking-portfolio {float:right; }
+.social-networking-portfolio div {display:inline-block; float:left; margin-right:10px;}
+.social-networking-portfolio .twitter-button { width:85px;}
+.social-networking-portfolio .google-plus { width:65px;}
+
+.grid3column .icon-container {width:280px; height:212px;}
+.grid3column .video-icon, .grid3column .photo-icon {margin-top:92px; margin-left:92px}
+.grid3column .page-icon {margin-top:92px; margin-right:92px;}
+
+.grid2column .icon-container {width:435px; height:328px;}
+.grid2column .video-icon, .grid2column .photo-icon {margin-top:151px; margin-left:160px}
+.grid2column .page-icon {margin-top:151px; margin-right:160px;}
+
+.grid-full-column .icon-container {width:900px; height:250px;}
+.grid-full-column .video-icon, .grid-full-column .photo-icon {margin-top:111px; margin-left:390px}
+.grid-full-column .page-icon {margin-top:111px; margin-right:390px;}
+
+.content-sidebar .grid4column .icon-container, .content-sidebar-left .grid4column .icon-container {width:135px; height:102px;}
+.content-sidebar .grid4column .video-icon, .content-sidebar .grid4column .photo-icon, .content-sidebar-left .grid4column .video-icon, .content-sidebar-left .grid4column .photo-icon {margin-top:37px; margin-left:28px}
+.content-sidebar .grid4column .page-icon, .content-sidebar-left .grid4column .page-icon {margin-top:37px; margin-right:28px;}
+
+.content-sidebar .grid3column .icon-container, .content-sidebar-left .grid3column .icon-container {width:190px; height:143px;}
+.content-sidebar .grid3column .video-icon, .content-sidebar .grid3column .photo-icon, .content-sidebar-left .grid3column .video-icon, .content-sidebar-left .grid3column .photo-icon {margin-top:57px; margin-left:55px}
+.content-sidebar .grid3column .page-icon, .content-sidebar-left .grid3column .page-icon {margin-top:57px; margin-right:55px;}
+
+.content-sidebar .grid2column .icon-container, .content-sidebar-left .grid2column .icon-container {width:300px; height:226px;}
+.content-sidebar .grid2column .video-icon, .content-sidebar .grid2column .photo-icon, .content-sidebar-left .grid2column .video-icon, .content-sidebar-left .grid2column .photo-icon {margin-top:99px; margin-left:99px}
+.content-sidebar .grid2column .page-icon, .content-sidebar-left .grid2column .page-icon {margin-top:99px; margin-right:99px;}
+
+.content-sidebar .grid-full-column .icon-container, .content-sidebar-left .grid-full-column .icon-container {width:630px; height:200px;}
+.content-sidebar .grid-full-column .video-icon, .content-sidebar .grid-full-column .photo-icon, .content-sidebar-left .grid-full-column .video-icon, .content-sidebar-left .grid-full-column .photo-icon {margin-top:86px; margin-left:260px;}
+.content-sidebar .grid-full-column .page-icon, .content-sidebar-left .grid-full-column .page-icon {margin-top:86px; margin-right:260px;}
+
+
+/* -------------------- E. COLUMNS -------------------- */
+.grid2column, .grid3column, .grid3columnbigcolumn, .grid4column, .grid4columnbig, .grid5column {float:left;}
+.grid2column {width:435px; margin-right:30px; }
+.grid3columnbigcolumn {width:590px; margin-right:30px;}
+.grid3column {width:280px; margin-right:30px; }
+.grid4column {width:202px; margin-right:30px;}
+.grid4columnbig {width:666px; margin-right:30px;}
+body .lastcolumn, #main-content-sidebar .lastcolumn {margin-right:0px !important;}
+footer .grid4column {width:212px; margin-right:30px;}
+
+.content-sidebar .grid2column, .content-sidebar-left .grid2column {width:300px; margin-right:30px; }
+.content-sidebar .grid3columnbigcolumn, .content-sidebar-left .grid3columnbigcolumn {width:410px; margin-right:30px;}
+.content-sidebar .grid3column, .content-sidebar-left .grid3column {width:190px; margin-right:30px; }
+.content-sidebar .grid4column, .content-sidebar-left .grid4column {width:135px; margin-right:30px;}
+.content-sidebar .grid4columnbig, .content-sidebar-left .grid4columnbig {width:465px; margin-right:30px;}
+
+
+footer .columns-3 .grid4column { width:283px; }
+footer .columns-2 .grid4column {width:440px; }
+footer .columns-1 .grid4column {width:940px; }
+footer .columns-3 .lastcolumn, #footer .columns-2 .lastcolumn {display:none;}
+
+
+/*
+=============================================== 05. BLOG STYLES ===============================================
+*/
+.blog-post {margin:12px 0 50px 0;}
+.blog-post-single {margin-top:12px;}
+.blog-post h2, .blog-post-single h2 {background:url(images/dotted-line.png) bottom left repeat-x; padding-bottom:16px; margin-bottom:6px;}
+.blog-post h2 a:hover, .blog-post-single h2 a:hover {text-decoration:none;}
+.blog-featured-image {margin-top:17px;}
+.blog-details {margin:12px 0 8px 0; color:#a2a2a2;}
+.blog-tags {float:left;}
+.blog-pagination {font-style:italic; font-weight:bold; margin-top:-22px;}
+.blog-pagination .left-pagination {margin-left:0px;}
+
+/* -------------------- A. BLOG COMMENTS -------------------- */
+#respond {padding-bottom:15px; padding-left:3px;}
+#respond input, #respond textarea {display:block; font-size:13px; background:#fff; }
+#respond .comment-form-author, #respond .comment-form-email, #respond .comment-form-url, #respond .comment-form-comment {font-size:90%; }
+p.form-allowed-tags {font-size:11px; line-height:16px;}
+p.form-allowed-tags code {display:block;}
+#respond label {font-size:12px; padding-left: 0px; }
+#respond .comment-form-author, #respond .comment-form-email, #respond .comment-form-url, #respond .comment-form-comment, #respond .form-allowed-tags, #respond .form-submit {padding:9px 0px 3px 0px;}
+#respond .comment-notes {padding-bottom:10px;}
+#respond h3 {padding:15px 0 15px 0;}
+h3#reply-title a {color:#777; font-size:70%; margin-bottom:5px;}
+h3#reply-title a:hover {color:#444;}
+h2#comments-title {margin-bottom:25px;}
+
+.commentlist {
+	float:left;
+	list-style: none;
+	margin: 0 auto;
+	width:520px;
+	position:relative;
+	left:101px;
+}
+
+.commentlist li.comment {
+	background: #f3f3f3;
+	border:1px solid #f3f3f3; 
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 0 1.625em 0 !important;
+	padding: 0.2em 1.4em 0.25em 1.4em;
+	list-style:none !important;
+	position: relative;
+}
+.commentlist .avatar {left: -102px; -webkit-box-shadow: 0 1px 2px #ccc; box-shadow: 0 1px 2px #ccc; -moz-box-shadow: 0 1px 2px #ccc; box-shadow: 0 1px 2px #ccc;  padding: 0; position: absolute; top: 0;}
+.commentlist .pingback { margin: 0 0 1.625em; padding: 0 1.625em; }
+ol.commentlist ul.children, ol.commentlist ul.children  li {
+	list-style: none ;
+	margin:0px;
+}
+.commentlist .children li.comment {
+	border-right:none;
+	border-top:none;
+	border-bottom:none;
+	border-left: 1px solid #dadada;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	margin: 0em 0 0 0;
+	padding:1em 1.6em 0em 2em;
+	position: relative;
+}
+.commentlist .avatar {left: -102px; -webkit-box-shadow: 0 1px 2px #ccc; box-shadow: 0 1px 2px #ccc; -moz-box-shadow: 0 1px 2px #ccc; box-shadow: 0 1px 2px #ccc;  padding: 0; position: absolute; top: 0;}
+.commentlist .pingback { margin: 0 0 1.625em; padding: 0 1.625em; }
+ol.commentlist ul.children, ol.commentlist ul.children  li {
+	list-style: none;
+	margin:0px;
+}
+.commentlist .children li.comment .avatar {top:0px;}
+.commentlist .children li.comment .fn { display: block; font-size:12px;}
+.comment-meta .fn {font-weight: bold; display: block; font-size:14px; color:#4c4c4c;}
+.comment-meta .fn a {font-weight:bold; text-decoration:underline;}
+.comment-meta a {text-decoration:none;}
+.comment-meta {
+	color: #666;
+	font-size: 11px;
+	padding-top:12px;
+	line-height: 2em;
+	padding-bottom:5px;
+}
+.commentlist .children li.comment .comment-meta {
+	line-height: 1.8em;
+	margin-left:63px ;
+	padding-top:0px;
+}
+.commentlist .children li.comment .comment-content {
+	margin: 1em 0 0;
+}
+
+.comment-meta a:focus,
+.comment-meta a:active,
+.comment-meta a:hover {
+}
+.commentlist > li:before {
+	content: url(images/comment-arrow.png);
+	left: -10px;
+	position: absolute;
+}
+.commentlist > li.pingback:before { content: ''; }
+.commentlist .children .avatar {
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	left: 2.2em;
+	padding: 0;
+	top: 2.2em;
+}
+
+a.comment-reply-link:hover,
+a.comment-reply-link:focus,
+a.comment-reply-link:active {
+	background: #888;
+	color: #fff;
+}
+a.comment-reply-link > span {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+}
+	position: absolute;
+}
+.commentlist > li.pingback:before { content: ''; }
+.commentlist .children .avatar {
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	left: 2.2em;
+	padding: 0;
+	top: 2.2em;
+}
+a.comment-reply-link {
+	background: #e4e4e4;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #666;
+	display: inline-block;
+	font-size: 10px;
+	font-family:Arial, Sans-serif;
+	padding: 1px 8px;
+	text-decoration: none;
+	margin-bottom:20px;
+}
+
+
+/*
+=============================================== 06. SIDEBAR STYLES ===============================================
+*/
+.sidebar-container {background:url(images/sidebar-container.png) 677px 6px no-repeat; }
+.side-bar-base {background:url(images/side-bar-base.png) 677px -69px no-repeat; height:39px;}
+.sidebar {float:right; width:220px; padding:0 25px; margin:46px 0 0 0;}
+.content-sidebar {width:630px;margin-left:25px; float:left;}
+.sidebar h5 {background:url(images/dotted-line.png) bottom left repeat-x; padding-bottom:11px; margin-bottom:12px;}
+.sidebar .blank-divider {margin-bottom:30px;}
+
+.sidebar #jtwt_picture {float:left;  padding:0px 10px 55px 0; }
+.sidebar #jtwt img { border:none; padding:0px; background:transparent; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:  none; }
+.sidebar #jtwt a:hover img {-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:  none;}
+.sidebar #jtwt { overflow:hidden; padding-bottom:10px; margin-bottom:15px; }
+.sidebar a#jtwt_date {font-size:10px;  padding-top:1px; font-style:italic;}
+
+.sidebar #flickr-footer ul {margin:0; padding:0; }
+.sidebar #flickr-footer ul li { padding:0px; margin:0px; list-style:none; display:inline;}
+.sidebar #flickr-footer ul li a {display:inline; background:transparent; padding:0px;}
+.sidebar #flickr-footer ul li img { width:63px; height:63px; margin:0px 10px 8px 0px; -khtml-opacity: 0.75; opacity: 0.75; filter:alpha(opacity=75); -moz-opacity: 0.75;  -webkit-transition: opacity 300ms ease-in-out; -moz-transition: opacity 300ms ease-in-out; -o-transition: opacity 300ms ease-in-out; -ms-transition: opacity 300ms ease-in-out;	transition: opacity 300ms ease-in-out;}
+.sidebar #flickr-footer ul li img:hover {-khtml-opacity: 1; opacity: 1; filter:alpha(opacity=100); -moz-opacity: 1;}
+
+.sidebar-container .sidebar-left {float:left;}
+.content-sidebar-left {float:right; width:630px; margin-right:25px; }
+.content-container .container-left {background:url(images/sidebar-container-left.png) 6px 6px no-repeat;}
+.content-container-base .side-bar-base-left {background:url(images/side-bar-base-left.png) 6px -69px no-repeat; height:39px;}
+
+
+/*
+=============================================== 07. STAR RATING ===============================================
+*/
+.single-rating {float:left; }
+
+.rating{
+	width:80px;
+	height:16px;
+	margin:3px 7px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	position:relative;
+	background: url(images/star-matrix.gif) no-repeat 0 0;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.nostar {background-position:0 0}
+.onestar {background-position:0 -16px}
+.twostar {background-position:0 -32px}
+.threestar {background-position:0 -48px}
+.fourstar {background-position:0 -64px}
+.fivestar {background-position:0 -80px}
+ul.rating li {
+	cursor: pointer;
+ /*ie5 mac doesn't like it if the list is floated\*/
+	float:left;
+	/* end hide*/
+	text-indent:-999em;
+}
+ul.rating li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	z-index: 200;
+}
+ul.rating li.one a {left:0}
+ul.rating li.two a {left:16px;}
+ul.rating li.three a {left:32px;}
+ul.rating li.four a {left:48px;}
+ul.rating li.five a {left:64px;}
+ul.rating li a:hover {
+	z-index:2;
+	width:80px;
+	height:16px;
+	overflow:hidden;
+	left:0;	
+	background: url(images/star-matrix.gif) no-repeat 0 0
+}
+ul.rating li.one a:hover {background-position:0 -96px;}
+ul.rating li.two a:hover {background-position:0 -112px;}
+ul.rating li.three a:hover {background-position:0 -128px}
+ul.rating li.four a:hover {background-position:0 -144px}
+ul.rating li.five a:hover {background-position:0 -160px}
+
+
+/*
+=============================================== 08. CONTACT STYLES ===============================================
+*/
+body.contact {background:#fff;}
+body.contact {background:#fff;}
+span.required {color:#d34a4a;}
+#contact-wrapper {width:100%; padding-top:8px; padding-bottom:10px; margin-left:4px;}
+input, textarea {background:#f8f8f8; border:1px solid #e7e7e7; font-size:14px; padding:10px; color:#666;}
+input:focus, textarea:focus {  border: 1px solid #bddae3; -webkit-box-shadow: 0px 0px 4px #6a9ec9; -moz-box-shadow: 0px 0px 4px #6a9ec9; box-shadow: 0px 0px 4px #6a9ec9;}
+#contactform div {padding-bottom:24px;}
+#contactform label { display:block; vertical-align: top; color:#ababab; margin-bottom:7px;}
+#contactform label.error {display:block; width:100%; font-style:italic;  height:25px; margin-bottom:-25px; font-size:11px; color:#dd8b8b;}
+#contactform input {width:320px;}
+#contactform textarea {width:550px;}
+#contactform input.error { border: 1px dotted #f4cbcb; background:#f8eded; }
+#contactform input.button {font-size:13px; width:auto; color:#919191;}
+p.error {color:#dd8b8b; font-weight:bold;}
+p.success {color:#64ba7c; font-size:14px; font-weight:bold; padding-bottom:2px; }
+p.success2 {padding-bottom:8px; }
+
+
+/*
+=============================================== 09. WIDGET STYLES ===============================================
+*/
+
+#main .sidebar .wpcf7 input {padding:5px; font-size:13px; width:165px; background:#fff; }
+#main .sidebar .wpcf7 textarea { width: 210px; font-size:13px; padding:5px ; background:#fff;}
+body #main .sidebar input.wpcf7-submit, .wpcf7 input.wpcf7-submit {width:auto;}
+.wpcf7 input {width:250px;}
+.wpcf7 textarea {width:350px;}
+
+
+footer .wpcf7 { width:218px; }
+footer .wpcf7 label { display:block; width:auto; font-size:11px; color:#bbb;}
+footer .wpcf7 input {	padding:4px; font-size:12px; width:150px ;  background:#fff;}
+footer .wpcf7 textarea {font-size:12px; padding:0.6em 0.5em 0.7em;  width: 200px ; height: 88px; background:#fff;}
+footer .wpcf7 p {clear:both; width:218px;   font-size:11px; color:#bbb;}
+
+
+
+.footer-content #flickr-footer ul {margin:0; padding:0; }
+.footer-content #flickr-footer ul li { padding:0px; margin:0px; list-style:none; display:inline;}
+.footer-content #flickr-footer ul li a {display:inline; background:transparent; padding:0px;}
+.footer-content #flickr-footer ul li img {border:3px solid #c9c9c9; width:50px; height:50px; margin:0px 7px 8px 7px; -khtml-opacity: 0.75; opacity: 0.75; filter:alpha(opacity=75); -moz-opacity: 0.75;  -webkit-transition: opacity 300ms ease-in-out; -moz-transition: opacity 300ms ease-in-out; -o-transition: opacity 300ms ease-in-out; -ms-transition: opacity 300ms ease-in-out;	transition: opacity 300ms ease-in-out;}
+.footer-content #flickr-footer ul li img:hover {-khtml-opacity: 1; opacity: 1; filter:alpha(opacity=100); -moz-opacity: 1;}
+footer #jtwt_picture {float:left;  padding:0px 10px 55px 0; }
+footer #jtwt img { border:none; padding:0px; background:transparent; }
+footer #jtwt { overflow:hidden; padding-bottom:10px; margin-bottom:15px; }
+footer a#jtwt_date {font-size:10px;  padding-top:1px; font-style:italic;}
+
+#main .sidebar .social-icons img {background:#bbb; padding:3px;  -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:  none; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-radius:3px;}
+
+/* -------------------- B. WP Calendar -------------------- */
+.sidebar #wp-calendar th {background-color:#ccc; color: #666; border:1px solid #999;}
+.sidebar #wp-calendar td { border:1px solid #999;}
+.sidebar #wp-calendar #today {
+background: #bbb;
+color: #fff;
+}
+
+#wp-calendar th {
+font-style: normal;
+color: #ccc;
+font-size:11px;
+padding:3px 0;
+background-color:#444;
+border:1px solid #d1d1d1;
+}
+#wp-calendar caption {font-style:italic; font-size:13px; line-height:22px;}
+
+#wp-calendar td {
+color: #8f8f8f;
+border:1px solid #666;
+font-size:12px ;
+font-weight:normal;
+letter-spacing: normal;
+padding: 4px 0;
+text-align: center;
+}
+#wp-calendar a {text-decoration:underline;}
+
+#wp-calendar a:hover {
+color: #7c7c7c;
+}
+
+#wp-calendar #today {
+background: #8f8f8f;
+color: #fff;
+}
+
+#wp-calendar {
+border: 1px solid #ddd;
+empty-cells: show;
+font-size: 14px;
+margin: 0;
+width: 90%;
+}
+
+
+/*
+=============================================== 10. HOMEPAGE SLIDER ===============================================
+*/
+
+#showcase-portfolio {width:900px; height:510px; }
+
+#showcase-portfolio .showcase-button-wrapper { 
+	top:6px;
+	padding-top:0px;
+}
+
+#showcase-portfolio .showcase-arrow-previous, #showcase-portfolio .showcase-arrow-next {
+	position: absolute;
+	bottom:250px;
+}
+
+#showcase-portfolio-v2 {width:500px; height:280px; margin-bottom:30px;}
+#showcase-portfolio-v2 .showcase-button-wrapper { 
+	top:6px;
+	padding-top:0px;
+}
+
+#showcase-portfolio-v2 .showcase-arrow-previous, #showcase-portfolio-v2 .showcase-arrow-next {
+	position: absolute;
+	bottom:140px;
+}
+
+#showcase-portfolio {margin-bottom:15px;}
+
+#awOnePageButton .view-slide {display: none; }
+/* This class is removed after the showcase is loaded */
+/* Assign the correct showcase height to prevent loading jumps in IE */
+.showcase-load {
+	height: 315px; /* Same as showcase javascript option */
+}
+/* Container when content is shown as one page */ .showcase-onepage {/**/ }
+
+/* Container when content is shown in slider */
+.showcase {
+	position: relative;
+	margin: 0px auto;
+	width:910px;
+	padding:26px 0 15px 0;
+}
+
+/* -------------------- A. NAVIGATION ARROWS -------------------- */
+.showcase-arrow-previous, .showcase-arrow-next {
+	position: absolute;
+	background: url('images/arrows.png');
+	width: 11px;
+	height: 19px;
+	bottom: -30px;
+	cursor: pointer;
+	z-index:55;
+}	
+.showcase-arrow-previous {
+	left: 12px;
+}	
+.showcase-arrow-previous:hover{
+	background-position: bottom left;
+}	
+.showcase-arrow-next {
+	right: 12px;
+	background-position: top right;
+}
+.showcase-arrow-next:hover {
+	background-position:bottom right;
+}
+	
+/* Content */
+.showcase-content {
+	width:920px;
+	height:315px;	
+}
+
+.showcase-content-vertical {
+	width:758px;
+	height:426px;
+}
+
+#main .showcase-content iframe, #main .showcase-content img {-moz-box-shadow: 0 1px 8px #aaa; -webkit-box-shadow: 0 1px 8px #aaa; box-shadow:  0 1px 8px #aaa;}
+.slider-left {float:left;padding-left:10px; width:560px; height:315px;}
+.slider-right {float:right; width:310px; padding-top:50px; padding-right:10px;}
+.slider-right p {font-size:13px; line-height:22px;}
+.post-details-slider {margin:6px 0px 10px 0px; color:#a2a2a2;}
+.post-details-slider a {color:#a2a2a2;}
+.more-link-slider {margin-top:4px;}
+.more-link-slider span {font-weight:400;  margin:0 7px;}
+.more-link-slider span a {font-style:italic; font-weight:700;}
+.full-width-slide {padding:0px 10px;}
+
+/* Styling the tooltips */
+.showcase-plus-anchor {background-image: url('images/plus.png'); background-repeat: no-repeat; }	
+.showcase-plus-anchor:hover { background-position: -32px 0;}
+div.showcase-tooltip {background-color: #fff; color: #000; text-align: left; padding: 5px 8px; background-image: url(images/white-opacity-80.png); }
+		
+/* -------------------- B. VERTICAL CAPTION -------------------- */
+.showcase-caption {
+	color: #000;
+	padding: 8px 15px;
+	text-align: left;
+	position: absolute;
+	bottom: 10px; left: 10px; right: 10px;
+	background-image: url(images/white-opacity-80.png);
+}
+.showcase-onepage .showcase-content {margin-bottom: 10px;}
+	
+/* -------------------- C. SLIDESHOW BULLETS -------------------- */
+.showcase-button-wrapper { 
+	text-align: center;
+	margin:0 auto;
+	position:relative;
+	height:0px;
+	top:27px;
+}
+.showcase-button-wrapper span {
+	margin-right: 3px;
+	padding-right:2px;
+	width:10px;
+	height:11px;
+	display:inline-block;
+	text-indent:-999999px;
+	cursor: pointer;
+	background:url(images/bullets.png) bottom left no-repeat;
+}
+.ie7 .showcase-button-wrapper {top:29px; margin-left:420px;}
+.ie7 .showcase-button-wrapper span {display:inline; float:left; }
+
+.showcase-button-wrapper span.active {  background:url(images/bullets.png) top left no-repeat;}
+	
+/* -------------------- D. VERTICAL THUMBNAILS -------------------- */
+.showcase-thumbnail-container /* Used for backgrounds, no other styling!!! */	{ }
+.showcase-thumbnail-wrapper { overflow: hidden;  }		
+.showcase-thumbnail {
+	width: 120px;
+	height: 82px;
+	cursor: pointer;
+	position: relative;
+}	
+.showcase-thumbnail img {border:none;}	
+.showcase-thumbnail-caption {
+	position: absolute;
+	bottom: 2px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	font-size:11px;
+}
+.showcase-thumbnail-content {
+	padding: 10px;
+	text-align: center;
+	padding-top: 25px;
+}
+.showcase-thumbnail-cover {
+	background-image: url(images/white-opacity-80.png);
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+.showcase-thumbnail:hover {
+}
+.showcase-thumbnail:hover .showcase-thumbnail-cover {
+	display: none;
+}
+.showcase-thumbnail.active {
+}
+.showcase-thumbnail.active .showcase-thumbnail-cover {
+	display: none;
+}
+.showcase-thumbnail-wrapper-horizontal .showcase-thumbnail {
+	margin-right: 10px;
+	width: 116px;
+}
+	
+.showcase-thumbnail-wrapper-vertical {
+	padding: 10px;
+}
+	
+.showcase-thumbnail-wrapper-vertical .showcase-thumbnail {
+	margin-bottom: 10px;
+}
+		
+.showcase-thumbnail-button-backward, .showcase-thumbnail-button-forward {
+	padding: 7px;
+	cursor: pointer;
+}	
+.showcase-thumbnail-button-backward {
+	padding-bottom: 0px;
+	padding-right: 0px;
+}
+.showcase-thumbnail-button-backward .showcase-thumbnail-vertical, .showcase-thumbnail-button-forward .showcase-thumbnail-vertical,
+.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal, .showcase-thumbnail-button-backward .showcase-thumbnail-horizontal {
+	background-image: url(images/arrows-small.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 17px;
+	height: 17px;
+}
+.showcase-thumbnail-button-backward .showcase-thumbnail-vertical {
+	background-position: 0 -51px;
+	margin-left: 55px;
+}
+.showcase-thumbnail-button-backward:hover .showcase-thumbnail-vertical {
+	background-position: -17px -51px;
+}
+.showcase-thumbnail-button-forward .showcase-thumbnail-vertical {
+	background-position: 0 -34px;
+	margin-left: 55px;
+}
+.showcase-thumbnail-button-forward:hover .showcase-thumbnail-vertical {
+	background-position: -17px -34px;
+}
+.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal {
+	background-position: 0 -17px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.showcase-thumbnail-button-backward:hover .showcase-thumbnail-horizontal {
+	background-position: -17px -17px;
+}
+.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal {
+	background-position: 0 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.showcase-thumbnail-button-forward:hover .showcase-thumbnail-horizontal{
+	background-position: -17px 0;
+}		
+/* Hide button text */
+.showcase-thumbnail-button-forward span span, .showcase-thumbnail-button-backward span span { display: none;}	
+/* Clear (used for horizontal thumbnails)
+-------------------------------------------*/
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; float: none;}
+
+
+/*
+=============================================== 11. PORTFOLIO SLIDER ===============================================
+*/
+/* -------------------- A. DIMENSIONS OF SLIDER -------------------- */
+/* change the ID to match your slider */
+#slider {
+	width: 900px;
+	height: 510px;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#slider-2 {
+	width: 500px;
+	height: 280px;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.anythingBase { max-width: 32766px; } /* Opera width restriction */
+
+/* -------------------- B. SLIDER COLORS -------------------- */
+/**** Default state (no keyboard focus) ****/
+/* slider window - top & bottom borders, default state */
+div.anythingSlider .anythingWindow { }
+/* Navigation buttons, default state */
+div.anythingSlider .anythingControls ul a.cur, div.anythingSlider .anythingControls ul a {
+}
+/* start-stop button, stopped, default state */
+div.anythingSlider .start-stop {background-color: #040; color: #fff; display: none !important;}
+/* start-stop button, playing, default state */
+div.anythingSlider .start-stop.playing { background-color: #800; }
+/* start-stop button, default hovered text color (when visible) */
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { color: #ddd; }
+
+/**** Active State (slider has keyboard focus) ****/
+/* slider window - top & bottom borders, active state */
+div.anythingSlider.activeSlider .anythingWindow {
+	border-color: #7C9127;
+}
+/* Navigation buttons, active state */
+
+/* start-stop button, stopped, active state */
+div.anythingSlider .start-stop {
+	background-color: #080;
+	color: #fff;
+}
+/* start-stop button, playing, active state */
+div.anythingSlider .start-stop.playing {
+	background-color: #d00;
+}
+/* start-stop button, active slider hovered text color (when visible) */
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
+	color: #fff;
+}
+
+/* -------------------- C. COMMON SLIDER SETTINGS -------------------- */
+/* Overall Wrapper: 45px right & left padding for the arrows, 28px @ bottom for navigation */
+div.anythingSlider {
+	display: block;
+	margin: 0 auto;
+	overflow: visible !important; /* needed for Opera and Safari */
+	position: relative;
+	padding: 0px;
+}
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+div.anythingSlider .anythingWindow img { margin:0 auto; text-align:center; display:block; vertical-align:center;}
+/* anythingSlider base (original element) */
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	overflow: visible !important;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+/* all panels inside the slider */
+.anythingBase .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.anythingBase .panel.vertical {
+	float: none;
+}
+
+.ie7 div.anythingSlider .arrow {display:none !important;}
+
+/* Navigation Arrows */
+div.anythingSlider .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+div.anythingSlider .arrow a {
+	display: block;
+	width: 11px;
+	height: 19px;
+	margin: -9px 0 0 0; /* half height of image */
+	text-align: center;
+	outline: 0;
+	background: url('images/arrows.png') no-repeat;
+}
+/* hide text, target the span so IE7 doesn't text-indent the link */
+div.anythingSlider .arrow a span { display: block; text-indent: -9999px; }
+/* back arrow */
+div.anythingSlider .back { left: -15px; }
+div.anythingSlider .back a { background-position: left top; }
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover { background-position: bottom left;}
+div.anythingSlider .back.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+/* forward arrow */
+div.anythingSlider .forward { right: -15px; }
+div.anythingSlider .forward a { background-position: right top; }
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover { background-position: top right; }
+div.anythingSlider .forward.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+
+/* Navigation Links */
+div.anythingSlider .anythingControls { outline: 0; display: none; }
+div.anythingSlider .anythingControls ul { padding: 0; float: left;right: 50%; position:absolute; margin:5px -10px 0px 0px;}
+.alignright div.anythingSlider .anythingControls ul { margin:4px -35px 0px 0px;}
+div.anythingSlider .anythingControls ul li { display: inline; margin:0px; padding:0px;}
+div.anythingSlider .anythingControls ul a {
+	margin-right: 3px;
+	padding-right:2px;
+	width:10px;
+	height:11px;
+	display:inline-block;
+	text-indent:-999999px;
+	cursor: pointer;
+	background:url(images/bullets.png) bottom left no-repeat;
+}
+.ie7 div.anythingSlider .anythingControls ul a {
+	display:block;
+}
+.ie7 div.anythingSlider .anythingControls ul li {float:left;}
+
+div.anythingSlider.activeSlider .anythingControls ul a.cur {
+	background:url(images/bullets.png) top left no-repeat;
+}
+
+div.anythingSlider .anythingControls ul a:hover { }
+/* Navigation size window */
+div.anythingSlider .anythingControls .anythingNavWindow { overflow: hidden; float: left; }
+
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+div.anythingSlider.rtl .anythingControls ul a { float: right; } /* reverse order of nav links */
+div.anythingSlider.rtl .anythingControls ul { float: left; }    /* move nav link group to left */
+div.anythingSlider.rtl .anythingWindow {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+/* div.anythingSlider.rtl .start-stop { float: right; } */ /* move start/stop button - in case you want to switch sides */
+
+/* Autoplay Start/Stop button */
+div.anythingSlider .start-stop {
+	background-image: url(../images/default.png);
+	background-position: center -288px;
+	background-repeat: repeat-x;
+	padding: 2px 5px;
+	width: 40px;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	z-index: 100;
+	outline: 0;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+}
+/* hide cell shading on hover - makes the button appear to come forward */
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { background-image: none; }
+
+/* probably not necessary, but added just in case */
+div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .anythingControls ul a, div.anythingSlider .arrow a, div.anythingSlider .start-stop {
+	transition-duration: 0;
+	-o-transition-duration: 0;
+	-moz-transition-duration: 0;
+	-webkit-transition-duration: 0;
+}
+
+
+/*
+=============================================== 12. REGULAR SHORTCODE SLIDER ===============================================
+*/
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.slider-inside-wrapper {margin-bottom:25px;}
+#slider a { border:0; display:block; }
+
+
+.slider-inside .nivo-controlNav {left: 458px; bottom:5px; z-index:99; background: rgba(0, 0, 0, 0.85);}
+#main-content-sidebar .slider-inside img {border:none;}
+.content-sidebar .nivo-controlNav {left:300px;}
+
+.nivo-controlNav {
+	position:absolute;
+	left:425px;
+	bottom:-35px;
+	border:1px solid #3d3d3d; 
+	background:#000; 
+	background: rgba(0, 0, 0, 0.65);
+	-moz-border-radius:4px; 
+	border-radius:4px; 
+	padding:0px 4px 0px 12px; 
+}
+.nivo-controlNav a {
+	display:block;
+	width:16px;
+	height:21px;
+	background: url(images/nav.png) no-repeat center center;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background: url(images/nav_active.png) no-repeat center center;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:25px;
+	height:67px;
+	background:url(images/arrows-new.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-25px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:89;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+
+/*
+=============================================== 11. TABS ===============================================
+*/
+
+/* -------------------- A. HOMEPAGE TABS -------------------- */
+.tabs {width:940px; padding-top:6px;}
+
+ul.tabNavigation { font-weight:700;}
+
+ul.tabNavigation { list-style: none; margin:0px 0px 0px 6px; width:940px; padding: 0; border-bottom:1px solid #ddd; background:url(images/tabNavigation-bg.png) top left no-repeat;}
+
+ul.tabNavigation li { list-style:none; margin:0px; padding:0px; display:inline; float:left; }
+
+ul.tabNavigation li a {
+	padding: 16px 22px 15px 22px;
+    color: #bababa;
+    text-decoration: none;
+	font-size:16px;
+	margin-bottom:-1px;
+	display:inline-block;
+	border-right:1px solid #dddddd;
+	border-bottom:1px solid #dddddd;
+}
+
+ul.tabNavigation li:first-child a {padding-left:20px;}
+
+ul.tabNavigation li a:hover {
+	color: #9f9e9e;
+}
+
+ul.tabNavigation li a.selected-tab, ul.tabNavigation li a.selected-tab:hover {
+    color: #7f7f7f;
+	border-bottom:1px solid #fff;
+	background:url(images/tabNavigation-bg.png) -10px -75px no-repeat;
+}
+
+ul.tabNavigation li:first-child a.selected-tab, ul.tabNavigation li:first-child a.selected-tab:hover {
+	background:url(images/tabNavigation-bg.png) 0px -75px no-repeat;
+}
+
+ul.tabNavigation li a:focus { outline: 0; }
+
+div.tabs > div {
+	padding:20px 0 0 0;
+	width:900px;
+	margin:0 0 0 26px;
+}
+
+/* -------------------- B. PAGE TABS -------------------- */
+.page-content .tabs {width:100%; padding-top:6px;}
+
+.page-content ul.tabNavigation { list-style: none; margin:0px 0px 0px 0px; width:100%; padding: 0; border-bottom:1px solid #d6d6d6; background:#ebeaea;}
+
+.page-content ul.tabNavigation li { list-style:none; margin:0px; padding:0px; display:inline; float:left; }
+
+.page-content ul.tabNavigation li a {
+	padding: 16px 22px 15px 22px;
+    color: #bababa;
+    text-decoration: none;
+	font-size:16px;
+	margin-bottom:-1px;
+	display:inline-block;
+	border-right:1px solid #d6d6d6;
+	border-bottom:1px solid #d6d6d6;
+}
+
+.page-content ul.tabNavigation li:first-child a {padding-left:20px;}
+
+.page-content ul.tabNavigation li a:hover {
+	color: #9f9e9e;
+}
+
+.page-content ul.tabNavigation li:first-child a.selected-tab, .page-content ul.tabNavigation li:first-child a.selected-tab:hover {
+	background:#f5f5f5;
+}
+
+.page-content ul.tabNavigation li a.selected-tab, .page-content ul.tabNavigation li a.selected-tab:hover {
+    color: #7f7f7f;
+	border-bottom:1px solid #f5f5f5;
+	background:#f5f5f5;
+}
+
+.page-content ul.tabNavigation li a:focus { outline: 0; }
+
+.page-content div.tabs > div {
+	padding:20px 20px;
+	width:590px;
+	margin:0px 0px 30px 0px;
+	background:#f5f5f5;
+}
+
+.page-content div.tabs > div {width:860px;}
+.sidebar-container div.tabs > div {width:590px;}
+
+
+
+/*
+=============================================== 13. NAVIGATION STYLES ===============================================
+*/
+/* -------------------- A. ESSENTIAL STYLES -------------------- */
+nav {position:relative; z-index:50;}
+.sf-menu, .sf-menu * { margin: 0; padding: 0; list-style: none; }
+.sf-menu { line-height:	1.0; }
+.sf-menu ul { position: absolute; top: -999em; 	width: 10em; /* left offset of submenus need to match (see below) */ }
+.sf-menu ul li { width:	 100%; }
+.sf-menu li:hover {	visibility:	inherit; /* fixes IE7 'sticky bug' */ }
+.sf-menu li {float:	left; position:	relative; }
+.sf-menu a {display: block;	position: relative; }
+.sf-menu li:hover ul, .sf-menu li.sfHover ul { left: 0; top: 2.5em; /* match top ul list item height */ z-index:99; }
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top:-999em; }
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul { left:10em; /* match ul width */ top:0; }
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {	top:-999em; }
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul { left:	10em; /* match ul width */ top:	0; }
+
+/* -------------------- B. TOP NAVIGATION SKIN -------------------- */
+.ie7 .sf-menu li:hover ul, .ie7 .sf-menu li.sfHover ul { top: 2.2em;}
+nav a {font-size:14px; font-weight:700;}
+#header-top .sf-menu { margin:5px 0 0 0; position:relative; left:-17px; }
+#header-top .sf-menu li:hover ul, #header-top .sf-menu li.sfHover ul { z-index:525;  }
+#header-top .sf-menu a {
+	padding:5px 17px 12px 17px;  
+	background:url(images/top-divider.png) top right no-repeat;
+	text-decoration:none;
+}
+#header-top .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:	#cdcdcd;
+}
+#header-top .sf-menu li li a, #header-top .sf-menu li li a:visited {
+	padding:8px 10px;
+	margin:0px 10px;
+	background:transparent;
+	border-top:1px dotted #777;
+}
+#header-top .sf-menu li li:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#header-top .sf-menu li li:first-child a {border:none; }
+
+#header-top .sf-menu li li:last-child a {
+	padding-bottom:14px;
+}
+
+#header-top .sf-menu li li {background-image:url(images/header-top-background.png); }
+
+#header-top .sf-menu li.sfHover li a, #header-top .sf-menu li.sfHover li a:visited, #header-top .sf-menu li.sfHover li li a, #header-top .sf-menu li.sfHover li li a:visited, #header-top .sf-menu li.sfHover li li li a, #header-top .sf-menu li.sfHover li li li a:visited, #header-top .sf-menu li.sfHover li li li li a, #header-top .sf-menu li.sfHover li li li li a:visited {
+	color:	#8d8d8d;
+}
+#header-top .sf-menu li.current-menu-item a, #header-top .sf-menu a:hover, #header-top .sf-menu a:visited:hover, #header-top .sf-menu li.sfHover a, #header-top .sf-menu li.sfHover a:visited {
+	color:#fff;
+}
+#header-top .sf-menu li li:hover, #header-top .sf-menu li li.sfHover, #header-top .sf-menu li li a:focus, #header-top .sf-menu li li a:hover, #header-top .sf-menu li li a:active, #header-top .sf-menu li li.sfHover a, #header-top .sf-menu li.sfHover li a:visited:hover, #header-top .sf-menu li li:hover a:visited,
+#header-top .sf-menu li li li:hover, #header-top .sf-menu li li li.sfHover, #header-top .sf-menu li li li a:focus, #header-top .sf-menu li li li a:hover, #header-top .sf-menu li li li a:active, #header-top .sf-menu li li li.sfHover a, #header-top .sf-menu li li.sfHover li a:visited:hover, #header-top .sf-menu li li li:hover a:visited,
+#header-top .sf-menu li li li li:hover, #header-top .sf-menu li li li li.sfHover, #header-top .sf-menu li li li li a:focus, #header-top .sf-menu li li li li a:hover, #header-top .sf-menu li li li li a:active, #header-top .sf-menu li li li li.sfHover a, #header-top .sf-menu li li li.sfHover li a:visited:hover, #header-top .sf-menu li li li li:hover a:visited,
+#header-top .sf-menu li li li li li:hover, #header-top .sf-menu li li li li li.sfHover, #header-top .sf-menu li li li li li a:focus, #header-top .sf-menu li li li li li a:hover, #header-top .sf-menu li li li li li a:active, #header-top .sf-menu li li li li li.sfHover a, #header-top .sf-menu li li li li.sfHover li a:visited:hover, #header-top .sf-menu li li li li li:hover a:visited  {
+	outline: 0;
+	color:#fff;
+	text-decoration:none;
+}
+
+/* -------------------- C. TOP NAVIGATION SKIN ARROWS -------------------- */
+#header-top .sf-menu a.sf-with-ul {
+	padding-right: 20px;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+#header-top .sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.65em;
+	top:			.65em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('images/arrows-ffffff-top.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+#header-top a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.4em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+#header-top li li .sf-sub-indicator {top:			1.15em; /* IE6 only */}
+#header-top li li a > .sf-sub-indicator {top:			.9em;}
+
+/* apply hovers to modern browsers */
+#header-top a:focus > .sf-sub-indicator,
+#header-top a:hover > .sf-sub-indicator,
+#header-top a:active > .sf-sub-indicator,
+#header-top li:hover > a > .sf-sub-indicator,
+#header-top li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+/* point right for anchors in subs */
+#header-top .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+#header-top .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+#header-top .sf-menu ul a:focus > .sf-sub-indicator,
+#header-top .sf-menu ul a:hover > .sf-sub-indicator,
+#header-top .sf-menu ul a:active > .sf-sub-indicator,
+#header-top .sf-menu ul li:hover > a > .sf-sub-indicator,
+#header-top .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/* -------------------- 1a. NARROW NAVIGATION SKIN -------------------- */
+#navigation-narrow {position:relative; top:18px; width:945px; margin:0px auto 0 auto; background:url(images/navigation-narrow-shadow.png) top right no-repeat; height:49px; }
+#navigation-narrow nav {
+	width:940px; margin:0 auto; 
+	position:relative; top:1px;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	 background-color:#fff; 
+	height:45px; 
+	background-image:url(images/navigation-narrow.png); background-position: bottom left; background-repeat:repeat-x;}
+
+#navigation-narrow .sf-menu li:hover ul, #navigation-narrow .sf-menu li.sfHover ul { top: 45px; padding-top:1px;  /* match top ul list item height */  }
+#navigation-narrow .sf-menu li:hover ul ul, #navigation-narrow .sf-menu li.sfHover ul ul { top:0px;  padding-top:0px;}
+
+#navigation-narrow .sf-menu a {
+	padding:16px 38px 15px 38px; 
+	background:url(images/navigation-narrow-hover.png) top right no-repeat;
+	text-decoration:none;
+}
+#navigation-narrow .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:	#9a9a9a;
+}
+#navigation-narrow .sf-menu li li a, #navigation-narrow .sf-menu li li a:visited {
+	padding:10px 12px 10px 12px;
+	margin:0px 12px;
+	background:transparent;
+	border-top:1px solid #d9d8d8;
+	font-size:13px;
+}
+
+#navigation-narrow .sf-menu li li:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+#navigation-narrow .sf-menu li li:first-child a {border:none; padding-top:14px;}
+
+
+#navigation-narrow .sf-menu li li:last-child a {
+	padding-bottom:14px;
+}
+
+#navigation-narrow .sf-menu li li {background-color:#fff; background-image:url(images/drop-down-narrow.png);}
+
+#navigation-narrow .sf-menu li.sfHover li a, #navigation-narrow .sf-menu li.sfHover li a:visited, #navigation-narrow .sf-menu li.sfHover li li a, #navigation-narrow .sf-menu li.sfHover li li a:visited, #navigation-narrow .sf-menu li.sfHover li li li a, #navigation-narrow .sf-menu li.sfHover li li li a:visited, #navigation-narrow .sf-menu li.sfHover li li li li a, #navigation-narrow .sf-menu li.sfHover li li li li a:visited {
+	color:	#9a9a9a;
+	background:transparent;
+}
+#navigation-narrow .sf-menu a:hover, #navigation-narrow .sf-menu a:visited:hover, #navigation-narrow .sf-menu li.sfHover a, #navigation-narrow .sf-menu li.sfHover a:visited {
+	color:#7a7a7a;
+	background:url(images/navigation-narrow-hover.png) bottom right no-repeat;
+}
+#navigation-narrow .sf-menu li.current-menu-item a, #navigation-narrow .sf-menu li.current-menu-item a:visited, #navigation-narrow .sf-menu li.current-menu-item a:hover 
+{color: #7a7a7a; background:url(images/navigation-narrow-selected.png) top right no-repeat;}
+
+
+#navigation-narrow .sf-menu li.current-menu-item li a:visited, #navigation-narrow .sf-menu li.current-menu-item li a:hover, #navigation-narrow .sf-menu li li.current-menu-item a:hover 
+{background:transparent;}
+
+#navigation-narrow .sf-menu li li:hover, #navigation-narrow .sf-menu li li.sfHover, #navigation-narrow .sf-menu li li a:focus, #navigation-narrow .sf-menu li li a:hover, #navigation-narrow .sf-menu li li a:active, #navigation-narrow .sf-menu li li.sfHover a, #navigation-narrow .sf-menu li.sfHover li a:visited:hover, #navigation-narrow .sf-menu li li:hover a:visited,
+#navigation-narrow .sf-menu li li li:hover, #navigation-narrow .sf-menu li li li.sfHover, #navigation-narrow .sf-menu li li li a:focus, #navigation-narrow .sf-menu li li li a:hover, #navigation-narrow .sf-menu li li li a:active, #navigation-narrow .sf-menu li li li.sfHover a, #navigation-narrow .sf-menu li li.sfHover li a:visited:hover, #navigation-narrow .sf-menu li li li:hover a:visited,
+#navigation-narrow .sf-menu li li li li:hover, #navigation-narrow .sf-menu li li li li.sfHover, #navigation-narrow .sf-menu li li li li a:focus, #navigation-narrow .sf-menu li li li li a:hover, #navigation-narrow .sf-menu li li li li a:active, #navigation-narrow .sf-menu li li li li.sfHover a, #navigation-narrow .sf-menu li li li.sfHover li a:visited:hover, #navigation-narrow .sf-menu li li li li:hover a:visited,
+#navigation-narrow .sf-menu li li li li li:hover, #navigation-narrow .sf-menu li li li li li.sfHover, #navigation-narrow .sf-menu li li li li li a:focus, #navigation-narrow .sf-menu li li li li li a:hover, #navigation-narrow .sf-menu li li li li li a:active, #navigation-narrow .sf-menu li li li li li.sfHover a, #navigation-narrow .sf-menu li li li li.sfHover li a:visited:hover, #navigation-narrow .sf-menu li li li li li:hover a:visited  {
+	outline: 0;
+	color:#767676;
+	text-decoration:none;
+}
+
+/* -------------------- 1b. NARROW NAVIGATION SKIN ARROWS -------------------- */
+#navigation-narrow .sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+#navigation-narrow .sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			1.2em;
+	top:			1.35em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('images/arrows-ffffff-light.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+
+#navigation-narrow a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			1.1em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+#navigation-narrow ul ul .sf-sub-indicator {top:			1.2em; /* IE6 only */}
+
+#navigation-narrow ul ul a > .sf-sub-indicator {  /* give all except IE6 the correct values */ top:			1em; }
+#navigation-narrow ul ul .sf-sub-indicator {right:0em; }
+#navigation-narrow ul ul li:first-child  a >  .sf-sub-indicator{top:1.2em;}
+
+/* apply hovers to modern browsers */
+#navigation-narrow a:focus > .sf-sub-indicator,
+#navigation-narrow a:hover > .sf-sub-indicator,
+#navigation-narrow a:active > .sf-sub-indicator,
+#navigation-narrow li:hover > a > .sf-sub-indicator,
+#navigation-narrow li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+#navigation-narrow .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+#navigation-narrow .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+#navigation-narrow .sf-menu ul a:focus > .sf-sub-indicator,
+#navigation-narrow .sf-menu ul a:hover > .sf-sub-indicator,
+#navigation-narrow .sf-menu ul a:active > .sf-sub-indicator,
+#navigation-narrow .sf-menu ul li:hover > a > .sf-sub-indicator,
+#navigation-narrow .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+
+/* -------------------- 2a. WIDE NAVIGATION SKIN -------------------- */
+#navigation-wide {position:relative; top:18px;  background:url(images/navigation-wide-shadow.png) top left repeat-x; height:54px; }
+#navigation-wide nav {
+	top:3px;
+	position:relative;
+	background-color:#fff; 
+	height:44px; 
+	background-image:url(images/navigation-wide.png); background-position: bottom left; background-repeat:repeat-x;}
+
+#navigation-wide .sf-menu li:hover ul, #navigation-wide .sf-menu li.sfHover ul { top:44px; margin-top:2px;  /* match top ul list item height */  }
+#navigation-wide .sf-menu li:hover ul ul, #navigation-wide .sf-menu li.sfHover ul ul { top:0px;  margin-top:0px;}
+
+#navigation-wide .sf-menu {width:940px; margin:0 auto;}
+#navigation-wide .sf-menu a {
+	padding:16px 38px 15px 38px; 
+	background:url(images/navigation-narrow-hover.png) top right no-repeat;
+	text-decoration:none;
+}
+#navigation-wide .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:	#9a9a9a;
+}
+#navigation-wide .sf-menu li li a, #navigation-wide .sf-menu li li a:visited {
+	padding:10px 12px 10px 12px;
+	margin:0px 12px;
+	background:transparent;
+	border-top:1px solid #d9d9d9;
+	font-size:13px;
+}
+#navigation-wide .sf-menu li:first-child {background-image:url(images/navigation-narrow-hover.png); background-position: -938px 0px; background-repeat: no-repeat;}
+#navigation-wide .sf-menu li li:first-child {background-image:url(images/drop-down-narrow.png); background-position: 0px 0px; background-repeat:repeat;}
+
+#navigation-wide .sf-menu li li:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+
+#navigation-wide .sf-menu li li:first-child a {border:none; padding-top:14px;}
+
+#navigation-wide .sf-menu li li:last-child a {
+	padding-bottom:14px;
+}
+
+#navigation-wide .sf-menu li li {background-color:#fff; background-image:url(images/drop-down-narrow.png);}
+
+#navigation-wide .sf-menu li.sfHover li a, #navigation-wide .sf-menu li.sfHover li a:visited, #navigation-wide .sf-menu li.sfHover li li a, #navigation-wide .sf-menu li.sfHover li li a:visited, #navigation-wide .sf-menu li.sfHover li li li a, #navigation-wide .sf-menu li.sfHover li li li a:visited, #navigation-wide .sf-menu li.sfHover li li li li a, #navigation-wide .sf-menu li.sfHover li li li li a:visited {
+	color:	#9a9a9a;
+	background:transparent;
+}
+#navigation-wide .sf-menu a:hover, #navigation-wide .sf-menu a:visited:hover, #navigation-wide .sf-menu li.sfHover a, #navigation-wide .sf-menu li.sfHover a:visited {
+	color:#7a7a7a;
+	background:url(images/navigation-narrow-hover.png) bottom right no-repeat;
+}
+
+#navigation-wide .sf-menu li.current-menu-item a, #navigation-wide .sf-menu li.current-menu-item a:visited, #navigation-wide .sf-menu li.current-menu-item a:hover {color: #7a7a7a; background:url(images/navigation-narrow-selected.png) top right no-repeat;}
+
+#navigation-wide .sf-menu li.current-menu-item li a:visited, #navigation-wide .sf-menu li.current-menu-item li a:hover, #navigation-wide .sf-menu li li.current-menu-item a:hover
+{background:transparent;}
+
+
+#navigation-wide .sf-menu li li:hover, #navigation-wide .sf-menu li li.sfHover, #navigation-wide .sf-menu li li a:focus, #navigation-wide .sf-menu li li a:hover, #navigation-wide .sf-menu li li a:active, #navigation-wide .sf-menu li li.sfHover a, #navigation-wide .sf-menu li.sfHover li a:visited:hover, #navigation-wide .sf-menu li li:hover a:visited,
+#navigation-wide .sf-menu li li li:hover, #navigation-wide .sf-menu li li li.sfHover, #navigation-wide .sf-menu li li li a:focus, #navigation-wide .sf-menu li li li a:hover, #navigation-wide .sf-menu li li li a:active, #navigation-wide .sf-menu li li li.sfHover a, #navigation-wide .sf-menu li li.sfHover li a:visited:hover, #navigation-wide .sf-menu li li li:hover a:visited,
+#navigation-wide .sf-menu li li li li:hover, #navigation-wide .sf-menu li li li li.sfHover, #navigation-wide .sf-menu li li li li a:focus, #navigation-wide .sf-menu li li li li a:hover, #navigation-wide .sf-menu li li li li a:active, #navigation-wide .sf-menu li li li li.sfHover a, #navigation-wide .sf-menu li li li.sfHover li a:visited:hover, #navigation-wide .sf-menu li li li li:hover a:visited,
+#navigation-wide .sf-menu li li li li li:hover, #navigation-wide .sf-menu li li li li li.sfHover, #navigation-wide .sf-menu li li li li li a:focus, #navigation-wide .sf-menu li li li li li a:hover, #navigation-wide .sf-menu li li li li li a:active, #navigation-wide .sf-menu li li li li li.sfHover a, #navigation-wide .sf-menu li li li li.sfHover li a:visited:hover, #navigation-wide .sf-menu li li li li li:hover a:visited  {
+	outline: 0;
+	color:#767676;
+	text-decoration:none;
+}
+/* -------------------- 2b. WIDE NAVIGATION SKIN ARROWS -------------------- */
+#navigation-wide .sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+#navigation-wide .sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			1.2em;
+	top:			1.35em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('images/arrows-ffffff-light.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+#navigation-wide a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			1.1em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+#navigation-wide ul ul .sf-sub-indicator {top:			1.2em; /* IE6 only */}
+#navigation-wide ul ul a > .sf-sub-indicator {  /* give all except IE6 the correct values */ top:			1em; }
+#navigation-wide ul ul .sf-sub-indicator {right:0em; }
+#navigation-wide ul ul li:first-child  a >  .sf-sub-indicator{top:1.2em;}
+
+
+/* apply hovers to modern browsers */
+#navigation-wide a:focus > .sf-sub-indicator,
+#navigation-wide a:hover > .sf-sub-indicator,
+#navigation-wide a:active > .sf-sub-indicator,
+#navigation-wide li:hover > a > .sf-sub-indicator,
+#navigation-wide li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+#navigation-wide .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+#navigation-wide .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+#navigation-wide .sf-menu ul a:focus > .sf-sub-indicator,
+#navigation-wide .sf-menu ul a:hover > .sf-sub-indicator,
+#navigation-wide .sf-menu ul a:active > .sf-sub-indicator,
+#navigation-wide .sf-menu ul li:hover > a > .sf-sub-indicator,
+#navigation-wide .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+
+/* -------------------- 3a. NARROW DARK NAVIGATION SKIN -------------------- */
+#navigation-narrow-dark {position:relative; top:18px; width:945px; margin:0px auto 0 auto; background:url(images/navigation-narrow-shadow.png) top right no-repeat; height:49px; }
+#navigation-narrow-dark nav {
+	width:940px; margin:0 auto; 
+	position:relative; top:1px;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	 background-color:#7a7a7a; 
+	height:45px; 
+	background-image:url(images/navigation-narrow-dark.png); background-position: bottom left; background-repeat:repeat-x;}
+
+#navigation-narrow-dark .sf-menu li:hover ul, #navigation-narrow-dark .sf-menu li.sfHover ul { top: 45px;/* match top ul list item height */  }
+#navigation-narrow-dark .sf-menu li:hover ul ul, #navigation-narrow-dark .sf-menu li.sfHover ul ul { top:0px;  margin-top:0px; }
+
+#navigation-narrow-dark .sf-menu a {
+	padding:16px 38px 15px 38px; 
+	background:url(images/navigation-narrow-dark-hover.png) top right no-repeat;
+	text-decoration:none;
+}
+#navigation-narrow-dark .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:	#ddd;
+}
+#navigation-narrow-dark .sf-menu li li a, #navigation-narrow-dark .sf-menu li li a:visited {
+	padding:10px 12px 10px 12px;
+	margin:0px 12px;
+	background:transparent;
+	border-top:1px solid #989899;
+	font-size:13px;
+}
+
+#navigation-narrow-dark .sf-menu li li:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+#navigation-narrow-dark .sf-menu li li:first-child a {border:none; padding-top:14px;}
+
+#navigation-narrow-dark .sf-menu li li:last-child a {
+	padding-bottom:14px;
+}
+
+#navigation-narrow-dark .sf-menu li li {background-color:#7a7a7a; background-image:url(images/drop-down-dark.png);}
+
+#navigation-narrow-dark .sf-menu li.sfHover li a, #navigation-narrow-dark .sf-menu li.sfHover li a:visited, #navigation-narrow-dark .sf-menu li.sfHover li li a, #navigation-narrow-dark .sf-menu li.sfHover li li a:visited, #navigation-narrow-dark .sf-menu li.sfHover li li li a, #navigation-narrow-dark .sf-menu li.sfHover li li li a:visited, #navigation-narrow-dark .sf-menu li.sfHover li li li li a, #navigation-narrow-dark .sf-menu li.sfHover li li li li a:visited {
+	color:	#c6c6c6;
+	background:transparent;
+}
+#navigation-narrow-dark .sf-menu a:hover, #navigation-narrow-dark .sf-menu a:visited:hover, #navigation-narrow-dark .sf-menu li.sfHover a, #navigation-narrow-dark .sf-menu li.sfHover a:visited {
+	color:#f1f1f1;
+	background:url(images/navigation-narrow-dark-hover.png) bottom right no-repeat;
+}
+
+
+#navigation-narrow-dark .sf-menu li.current-menu-item a, #navigation-narrow-dark .sf-menu li.current-menu-item a:visited, #navigation-narrow-dark .sf-menu li.current-menu-item a:hover {color: #f1f1f1; background:url(images/navigation-narrow-dark-selected.png) top right no-repeat;}
+
+#navigation-narrow-dark .sf-menu li.current-menu-item li a:visited, #navigation-narrow-dark .sf-menu li.current-menu-item li a:hover, #navigation-narrow-dark .sf-menu li li.current-menu-item a:hover
+ {background:transparent;}
+
+
+
+#navigation-narrow-dark .sf-menu li li:hover, #navigation-narrow-dark .sf-menu li li.sfHover, #navigation-narrow-dark .sf-menu li li a:focus, #navigation-narrow-dark .sf-menu li li a:hover, #navigation-narrow-dark .sf-menu li li a:active, #navigation-narrow-dark .sf-menu li li.sfHover a, #navigation-narrow-dark .sf-menu li.sfHover li a:visited:hover, #navigation-narrow-dark .sf-menu li li:hover a:visited,
+#navigation-narrow-dark .sf-menu li li li:hover, #navigation-narrow-dark .sf-menu li li li.sfHover, #navigation-narrow-dark .sf-menu li li li a:focus, #navigation-narrow-dark .sf-menu li li li a:hover, #navigation-narrow-dark .sf-menu li li li a:active, #navigation-narrow-dark .sf-menu li li li.sfHover a, #navigation-narrow-dark .sf-menu li li.sfHover li a:visited:hover, #navigation-narrow-dark .sf-menu li li li:hover a:visited,
+#navigation-narrow-dark .sf-menu li li li li:hover, #navigation-narrow-dark .sf-menu li li li li.sfHover, #navigation-narrow-dark .sf-menu li li li li a:focus, #navigation-narrow-dark .sf-menu li li li li a:hover, #navigation-narrow-dark .sf-menu li li li li a:active, #navigation-narrow-dark .sf-menu li li li li.sfHover a, #navigation-narrow-dark .sf-menu li li li.sfHover li a:visited:hover, #navigation-narrow-dark .sf-menu li li li li:hover a:visited,
+#navigation-narrow-dark .sf-menu li li li li li:hover, #navigation-narrow-dark .sf-menu li li li li li.sfHover, #navigation-narrow-dark .sf-menu li li li li li a:focus, #navigation-narrow-dark .sf-menu li li li li li a:hover, #navigation-narrow-dark .sf-menu li li li li li a:active, #navigation-narrow-dark .sf-menu li li li li li.sfHover a, #navigation-narrow-dark .sf-menu li li li li.sfHover li a:visited:hover, #navigation-narrow-dark .sf-menu li li li li li:hover a:visited  {
+	outline: 0;
+	color:#f1f1f1;
+	text-decoration:none;
+}
+
+/* -------------------- 3b. NARROW DARK NAVIGATION SKIN ARROWS -------------------- */
+#navigation-narrow-dark .sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+#navigation-narrow-dark .sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			1.2em;
+	top:			1.35em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('images/arrows-ffffff-dark.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+#navigation-narrow-dark a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			1.1em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+#navigation-narrow-dark ul ul .sf-sub-indicator {top:			1.2em; /* IE6 only */}
+#navigation-narrow-dark ul ul a > .sf-sub-indicator {  /* give all except IE6 the correct values */ top:			1em; }
+#navigation-narrow-dark ul ul .sf-sub-indicator {right:0em; }
+#navigation-narrow-dark ul ul li:first-child  a >  .sf-sub-indicator{top:1.2em;}
+
+
+/* apply hovers to modern browsers */
+#navigation-narrow-dark a:focus > .sf-sub-indicator,
+#navigation-narrow-dark a:hover > .sf-sub-indicator,
+#navigation-narrow-dark a:active > .sf-sub-indicator,
+#navigation-narrow-dark li:hover > a > .sf-sub-indicator,
+#navigation-narrow-dark li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+#navigation-narrow-dark .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+#navigation-narrow-dark .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+#navigation-narrow-dark .sf-menu ul a:focus > .sf-sub-indicator,
+#navigation-narrow-dark .sf-menu ul a:hover > .sf-sub-indicator,
+#navigation-narrow-dark .sf-menu ul a:active > .sf-sub-indicator,
+#navigation-narrow-dark .sf-menu ul li:hover > a > .sf-sub-indicator,
+#navigation-narrow-dark .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+
+
+
+/* -------------------- 4a. WIDE NAVIGATION SKIN -------------------- */
+#navigation-wide-dark {position:relative; top:18px;  background:url(images/navigation-wide-dark-shadow.png) top left repeat-x; height:54px; }
+#navigation-wide-dark nav {
+	top:3px;
+	position:relative;
+	background-color:#7a7a7a; 
+	height:44px; 
+	background-image:url(images/navigation-wide.png); background-position: bottom left; background-repeat:repeat-x;}
+
+#navigation-wide-dark .sf-menu li:hover ul, #navigation-wide-dark .sf-menu li.sfHover ul { top:44px;  /* match top ul list item height */  }
+#navigation-wide-dark .sf-menu li:hover ul ul, #navigation-wide-dark .sf-menu li.sfHover ul ul { top:0px;  }
+
+#navigation-wide-dark .sf-menu {width:940px; margin:0 auto;}
+#navigation-wide-dark .sf-menu a {
+	padding:16px 38px 15px 38px; 
+	background:url(images/navigation-narrow-dark-hover.png) top right no-repeat;
+	text-decoration:none;
+}
+#navigation-wide-dark .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:	#ddd;
+}
+#navigation-wide-dark .sf-menu li li a, #navigation-wide-dark .sf-menu li li a:visited {
+	padding:10px 12px 10px 12px;
+	margin:0px 12px;
+	background:transparent;
+	border-top:1px solid #989899;
+	font-size:13px;
+}
+#navigation-wide-dark .sf-menu li:first-child {background-image:url(images/navigation-narrow-dark-hover.png); background-position: -798px 0px; background-repeat: no-repeat;}
+#navigation-wide-dark .sf-menu li li:first-child {background-image:url(images/drop-down-dark2.png); background-position: 0px 0px; background-repeat:repeat;}
+
+#navigation-wide-dark .sf-menu li li:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+#navigation-wide-dark .sf-menu li li:first-child a { border:none; padding-top:12px;}
+
+#navigation-wide-dark .sf-menu li li:last-child a {
+	padding-bottom:14px;
+}
+#navigation-wide-dark .sf-menu li li:first-child li a, #navigation-wide-dark .sf-menu li li:last-child li:first-child li a {
+	border:none;
+}
+#navigation-wide-dark .sf-menu li li:first-child li:last-child a, #navigation-wide-dark .sf-menu li li:first-child li:last-child li:last-child a {border:none;}
+
+#navigation-wide-dark .sf-menu li li {background-color:#7a7a7a; background-image:url(images/drop-down-dark2.png);}
+
+#navigation-wide-dark .sf-menu li.sfHover li a, #navigation-wide-dark .sf-menu li.sfHover li a:visited, #navigation-wide-dark .sf-menu li.sfHover li li a, #navigation-wide-dark .sf-menu li.sfHover li li a:visited, #navigation-wide-dark .sf-menu li.sfHover li li li a, #navigation-wide-dark .sf-menu li.sfHover li li li a:visited, #navigation-wide-dark .sf-menu li.sfHover li li li li a, #navigation-wide-dark .sf-menu li.sfHover li li li li a:visited {
+	color:	#c6c6c6;
+	background:transparent;
+}
+#navigation-wide-dark .sf-menu a:hover, #navigation-wide-dark .sf-menu a:visited:hover, #navigation-wide-dark .sf-menu li.sfHover a, #navigation-wide-dark .sf-menu li.sfHover a:visited {
+	color:#f1f1f1;
+	background:url(images/navigation-narrow-dark-hover.png) bottom right no-repeat;
+}
+
+#navigation-wide-dark .sf-menu li.current-menu-item a, #navigation-wide-dark .sf-menu li.current-menu-item a:visited, #navigation-wide-dark .sf-menu li.current-menu-item a:hover {color: #f1f1f1; background:url(images/navigation-narrow-dark-selected.png) top right no-repeat;}
+
+#navigation-wide-dark .sf-menu li.current-menu-item li a:visited, #navigation-wide-dark .sf-menu li.current-menu-item li a:hover, #navigation-wide-dark .sf-menu li li.current-menu-item a:hover
+{background:transparent;}
+
+
+#navigation-wide-dark .sf-menu li li:hover, #navigation-wide-dark .sf-menu li li.sfHover, #navigation-wide-dark .sf-menu li li a:focus, #navigation-wide-dark .sf-menu li li a:hover, #navigation-wide-dark .sf-menu li li a:active, #navigation-wide-dark .sf-menu li li.sfHover a, #navigation-wide-dark .sf-menu li.sfHover li a:visited:hover, #navigation-wide-dark .sf-menu li li:hover a:visited,
+#navigation-wide-dark .sf-menu li li li:hover, #navigation-wide-dark .sf-menu li li li.sfHover, #navigation-wide-dark .sf-menu li li li a:focus, #navigation-wide-dark .sf-menu li li li a:hover, #navigation-wide-dark .sf-menu li li li a:active, #navigation-wide-dark .sf-menu li li li.sfHover a, #navigation-wide-dark .sf-menu li li.sfHover li a:visited:hover, #navigation-wide-dark .sf-menu li li li:hover a:visited,
+#navigation-wide-dark .sf-menu li li li li:hover, #navigation-wide-dark .sf-menu li li li li.sfHover, #navigation-wide-dark .sf-menu li li li li a:focus, #navigation-wide-dark .sf-menu li li li li a:hover, #navigation-wide-dark .sf-menu li li li li a:active, #navigation-wide-dark .sf-menu li li li li.sfHover a, #navigation-wide-dark .sf-menu li li li.sfHover li a:visited:hover, #navigation-wide-dark .sf-menu li li li li:hover a:visited,
+#navigation-wide-dark .sf-menu li li li li li:hover, #navigation-wide-dark .sf-menu li li li li li.sfHover, #navigation-wide-dark .sf-menu li li li li li a:focus, #navigation-wide-dark .sf-menu li li li li li a:hover, #navigation-wide-dark .sf-menu li li li li li a:active, #navigation-wide-dark .sf-menu li li li li li.sfHover a, #navigation-wide-dark .sf-menu li li li li.sfHover li a:visited:hover, #navigation-wide-dark .sf-menu li li li li li:hover a:visited  {
+	outline: 0;
+	color:#f1f1f1;
+	text-decoration:none;
+}
+/* -------------------- 4b. WIDE NAVIGATION SKIN ARROWS -------------------- */
+#navigation-wide-dark .sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+#navigation-wide-dark .sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			1.2em;
+	top:			1.35em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('images/arrows-ffffff-dark.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+#navigation-wide-dark a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			1.1em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+#navigation-wide-dark ul ul .sf-sub-indicator {top:			1.2em; /* IE6 only */}
+#navigation-wide-dark ul ul a > .sf-sub-indicator {  /* give all except IE6 the correct values */ top:			1em; }
+#navigation-wide-dark ul ul .sf-sub-indicator {right:0em; }
+#navigation-wide-dark ul ul li:first-child  a >  .sf-sub-indicator{top:1.1em;}
+
+
+/* apply hovers to modern browsers */
+#navigation-wide-dark a:focus > .sf-sub-indicator,
+#navigation-wide-dark a:hover > .sf-sub-indicator,
+#navigation-wide-dark a:active > .sf-sub-indicator,
+#navigation-wide-dark li:hover > a > .sf-sub-indicator,
+#navigation-wide-dark li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+#navigation-wide-dark .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+#navigation-wide-dark .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+#navigation-wide-dark .sf-menu ul a:focus > .sf-sub-indicator,
+#navigation-wide-dark .sf-menu ul a:hover > .sf-sub-indicator,
+#navigation-wide-dark .sf-menu ul a:active > .sf-sub-indicator,
+#navigation-wide-dark .sf-menu ul li:hover > a > .sf-sub-indicator,
+#navigation-wide-dark .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/* -------------------- DEFAULT ARROWS (DO NOT EDIT THIS SPOT) -------------------- */
+.sf-menu a.sf-with-ul {padding-right: 	2.25em; min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */}
+.sf-sub-indicator {position:		absolute; display:		block; right:			.75em; top:			1.05em; width:			10px; height:			10px; text-indent: 	-999em; overflow:		hidden; background:		url('images/arrows-ffffff.png') no-repeat -10px -100px; }
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */ top:			.8em; background-position: 0 -100px; /* use translucent arrow for modern browsers*/ }
+a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-indicator, li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator { background-position: -10px -100px; /* arrow hovers for modern browsers*/ }
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+.sf-menu ul a:focus > .sf-sub-indicator, .sf-menu ul a:hover > .sf-sub-indicator, .sf-menu ul a:active > .sf-sub-indicator, .sf-menu ul li:hover > a > .sf-sub-indicator, .sf-menu ul li.sfHover > a > .sf-sub-indicator { background-position: -10px 0; /* arrow hovers for modern browsers*/ }
+.sf-shadow ul { background:	url('images/shadow.png') no-repeat bottom right; padding: 0 8px 9px 0; -moz-border-radius-bottomleft: 17px; -moz-border-radius-topright: 17px; -webkit-border-top-right-radius: 17px; -webkit-border-bottom-left-radius: 17px; }
+.sf-shadow ul.sf-shadow-off { background: transparent; }
+
+
+/*
+=============================================== 17. MEDIA QUERIES ===============================================
+*/
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/*
+=============================================== 18. PRINT STYLES ===============================================
+*/
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+
+
+/*
+=============================================== 19. LIGHTBOX STYLES ===============================================
+*/
+div.pp_default {color:#888888;}
+div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top .pp_left,div.pp_default .pp_top .pp_right,div.pp_default .pp_bottom,div.pp_default .pp_bottom .pp_left,div.pp_default .pp_bottom .pp_middle,div.pp_default .pp_bottom .pp_right{height:13px}
+div.pp_default .pp_top .pp_left{background:url(images/prettyPhoto/default/sprite.png) -78px -93px no-repeat}
+div.pp_default .pp_top .pp_middle{background:url(images/prettyPhoto/default/sprite_x.png) top left repeat-x}
+div.pp_default .pp_top .pp_right{background:url(images/prettyPhoto/default/sprite.png) -112px -93px no-repeat}
+div.pp_default .pp_content .ppt{color:#f8f8f8}
+div.pp_default .pp_content_container .pp_left{background:url(images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;padding-left:13px}
+div.pp_default .pp_content_container .pp_right{background:url(images/prettyPhoto/default/sprite_y.png) top right repeat-y;padding-right:13px}
+div.pp_default .pp_next:hover{background:url(images/prettyPhoto/default/sprite_next.png) center right no-repeat;cursor:pointer}
+div.pp_default .pp_previous:hover{background:url(images/prettyPhoto/default/sprite_prev.png) center left no-repeat;cursor:pointer}
+div.pp_default .pp_expand{background:url(images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;cursor:pointer;width:28px;height:28px}
+div.pp_default .pp_expand:hover{background:url(images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;cursor:pointer}
+div.pp_default .pp_contract{background:url(images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;cursor:pointer;width:28px;height:28px}
+div.pp_default .pp_contract:hover{background:url(images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;cursor:pointer}
+div.pp_default .pp_close{width:30px;height:30px;background:url(images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;cursor:pointer}
+div.pp_default .pp_gallery ul li a{background:url(images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;border:1px solid #aaa}
+div.pp_default .pp_gallery a.pp_arrow_previous,div.pp_default .pp_gallery a.pp_arrow_next{position:static;left:auto}
+div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause{background:url(images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;height:30px;width:30px}
+div.pp_default .pp_nav .pp_pause{background-position:-51px -29px}
+div.pp_default a.pp_arrow_previous,div.pp_default a.pp_arrow_next{background:url(images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;height:20px;width:20px;margin:4px 0 0}
+div.pp_default a.pp_arrow_next{left:52px;background-position:-82px -3px}div.pp_default .pp_content_container .pp_details{margin-top:5px}div.pp_default .pp_nav{clear:none;height:30px;width:105px;position:relative}
+div.pp_default .pp_nav .currentTextHolder{font-family:"Helvetica Neue" Helvetica, Arial, Sans-Serif;font-color:#999;font-size:11px;left:75px;line-height:25px;position:absolute;top:2px;margin:0;padding:0 0 0 10px}
+div.pp_default .pp_close:hover,div.pp_default .pp_nav .pp_play:hover,div.pp_default .pp_nav .pp_pause:hover,div.pp_default .pp_arrow_next:hover,div.pp_default .pp_arrow_previous:hover{opacity:0.7}
+div.pp_default .pp_description{font-size:11px;font-weight:700;line-height:14px;margin:5px 50px 5px 0}
+div.pp_default .pp_bottom .pp_left{background:url(images/prettyPhoto/default/sprite.png) -78px -127px no-repeat}
+div.pp_default .pp_bottom .pp_middle{background:url(images/prettyPhoto/default/sprite_x.png) bottom left repeat-x}
+div.pp_default .pp_bottom .pp_right{background:url(images/prettyPhoto/default/sprite.png) -112px -127px no-repeat}
+div.pp_default .pp_loaderIcon{background:url(images/prettyPhoto/default/loader.gif) center center no-repeat}
+div.light_rounded .pp_top .pp_left{background:url(images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat}
+div.light_rounded .pp_top .pp_right{background:url(images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat}
+div.light_rounded .pp_next:hover{background:url(images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;cursor:pointer}
+div.light_rounded .pp_previous:hover{background:url(images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;cursor:pointer}
+div.light_rounded .pp_expand{background:url(images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;cursor:pointer}
+div.light_rounded .pp_expand:hover{background:url(images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;cursor:pointer}
+div.light_rounded .pp_contract{background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;cursor:pointer}
+div.light_rounded .pp_contract:hover{background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;cursor:pointer}
+div.light_rounded .pp_close{width:75px;height:22px;background:url(images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;cursor:pointer}
+div.light_rounded .pp_nav .pp_play{background:url(images/prettyPhoto/light_rounded/sprite.png) -1px -100px no-repeat;height:15px;width:14px}
+div.light_rounded .pp_nav .pp_pause{background:url(images/prettyPhoto/light_rounded/sprite.png) -24px -100px no-repeat;height:15px;width:14px}
+div.light_rounded .pp_arrow_previous{background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat}
+div.light_rounded .pp_arrow_next{background:url(images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat}
+div.light_rounded .pp_bottom .pp_left{background:url(images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat}
+div.light_rounded .pp_bottom .pp_right{background:url(images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat}
+div.dark_rounded .pp_top .pp_left{background:url(images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat}
+div.dark_rounded .pp_top .pp_right{background:url(images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat}
+div.dark_rounded .pp_content_container .pp_left{background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y}
+div.dark_rounded .pp_content_container .pp_right{background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y}
+div.dark_rounded .pp_next:hover{background:url(images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;cursor:pointer}
+div.dark_rounded .pp_previous:hover{background:url(images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;cursor:pointer}
+div.dark_rounded .pp_expand{background:url(images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;cursor:pointer}
+div.dark_rounded .pp_expand:hover{background:url(images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;cursor:pointer}
+div.dark_rounded .pp_contract{background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;cursor:pointer}
+div.dark_rounded .pp_contract:hover{background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;cursor:pointer}
+div.dark_rounded .pp_close{width:75px;height:22px;background:url(images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;cursor:pointer}
+div.dark_rounded .pp_description{margin-right:85px;color:#fff}
+div.dark_rounded .pp_nav .pp_play{background:url(images/prettyPhoto/dark_rounded/sprite.png) -1px -100px no-repeat;height:15px;width:14px}
+div.dark_rounded .pp_nav .pp_pause{background:url(images/prettyPhoto/dark_rounded/sprite.png) -24px -100px no-repeat;height:15px;width:14px}
+div.dark_rounded .pp_arrow_previous{background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat}
+div.dark_rounded .pp_arrow_next{background:url(images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat}
+div.dark_rounded .pp_bottom .pp_left{background:url(images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat}
+div.dark_rounded .pp_bottom .pp_right{background:url(images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat}
+div.dark_rounded .pp_loaderIcon{background:url(images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat}
+div.dark_square .pp_left,div.dark_square .pp_middle,div.dark_square .pp_right,div.dark_square .pp_content{background:#000}
+div.dark_square .pp_description{color:#fff;margin:0 85px 0 0}
+div.dark_square .pp_loaderIcon{background:url(images/prettyPhoto/dark_square/loader.gif) center center no-repeat}
+div.dark_square .pp_expand{background:url(images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;cursor:pointer}
+div.dark_square .pp_expand:hover{background:url(images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;cursor:pointer}
+div.dark_square .pp_contract{background:url(images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;cursor:pointer}
+div.dark_square .pp_contract:hover{background:url(images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;cursor:pointer}
+div.dark_square .pp_close{width:75px;height:22px;background:url(images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;cursor:pointer}
+div.dark_square .pp_nav{clear:none}
+div.dark_square .pp_nav .pp_play{background:url(images/prettyPhoto/dark_square/sprite.png) -1px -100px no-repeat;height:15px;width:14px}
+div.dark_square .pp_nav .pp_pause{background:url(images/prettyPhoto/dark_square/sprite.png) -24px -100px no-repeat;height:15px;width:14px}
+div.dark_square .pp_arrow_previous{background:url(images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat}
+div.dark_square .pp_arrow_next{background:url(images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat}
+div.dark_square .pp_next:hover{background:url(images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;cursor:pointer}
+div.dark_square .pp_previous:hover{background:url(images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;cursor:pointer}
+div.light_square .pp_expand{background:url(images/prettyPhoto/light_square/sprite.png) -31px -26px no-repeat;cursor:pointer}
+div.light_square .pp_expand:hover{background:url(images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat;cursor:pointer}
+div.light_square .pp_contract{background:url(images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat;cursor:pointer}
+div.light_square .pp_contract:hover{background:url(images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat;cursor:pointer}
+div.light_square .pp_close{width:75px;height:22px;background:url(images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat;cursor:pointer}
+div.light_square .pp_nav .pp_play{background:url(images/prettyPhoto/light_square/sprite.png) -1px -100px no-repeat;height:15px;width:14px}
+div.light_square .pp_nav .pp_pause{background:url(images/prettyPhoto/light_square/sprite.png) -24px -100px no-repeat;height:15px;width:14px}
+div.light_square .pp_arrow_previous{background:url(images/prettyPhoto/light_square/sprite.png) 0 -71px no-repeat}
+div.light_square .pp_arrow_next{background:url(images/prettyPhoto/light_square/sprite.png) -22px -71px no-repeat}
+div.light_square .pp_next:hover{background:url(images/prettyPhoto/light_square/btnNext.png) center right no-repeat;cursor:pointer}
+div.light_square .pp_previous:hover{background:url(images/prettyPhoto/light_square/btnPrevious.png) center left no-repeat;cursor:pointer}
+div.facebook .pp_top .pp_left{background:url(images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat}
+div.facebook .pp_top .pp_middle{background:url(images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x}
+div.facebook .pp_top .pp_right{background:url(images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat}
+div.facebook .pp_content_container .pp_left{background:url(images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y}
+div.facebook .pp_content_container .pp_right{background:url(images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y}
+div.facebook .pp_expand{background:url(images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;cursor:pointer}
+div.facebook .pp_expand:hover{background:url(images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;cursor:pointer}
+div.facebook .pp_contract{background:url(images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;cursor:pointer}
+div.facebook .pp_contract:hover{background:url(images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;cursor:pointer}
+div.facebook .pp_close{width:22px;height:22px;background:url(images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;cursor:pointer}
+div.facebook .pp_description{margin:0 37px 0 0}div.facebook .pp_loaderIcon{background:url(images/prettyPhoto/facebook/loader.gif) center center no-repeat}
+div.facebook .pp_arrow_previous{background:url(images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;height:22px;margin-top:0;width:22px}
+div.facebook .pp_arrow_previous.disabled{background-position:0 -96px;cursor:default}
+div.facebook .pp_arrow_next{background:url(images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;height:22px;margin-top:0;width:22px}
+div.facebook .pp_arrow_next.disabled{background-position:-32px -96px;cursor:default}
+div.facebook .pp_nav{margin-top:0}
+div.facebook .pp_nav p{font-size:15px;padding:0 3px 0 4px}
+div.facebook .pp_nav .pp_play{background:url(images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;height:22px;width:22px}
+div.facebook .pp_nav .pp_pause{background:url(images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;height:22px;width:22px}
+div.facebook .pp_next:hover{background:url(images/prettyPhoto/facebook/btnNext.png) center right no-repeat;cursor:pointer}
+div.facebook .pp_previous:hover{background:url(images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;cursor:pointer}
+div.facebook .pp_bottom .pp_left{background:url(images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat}
+div.facebook .pp_bottom .pp_middle{background:url(images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x}
+div.facebook .pp_bottom .pp_right{background:url(images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat}
+div.pp_pic_holder a:focus{outline:none}div.pp_overlay{background:#000;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500}
+div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}.pp_content{height:40px;min-width:40px}
+* html .pp_content{width:40px}
+.pp_content_container{position:relative;text-align:left;width:100%}
+.pp_content_container .pp_left{padding-left:20px}.pp_content_container .pp_right{padding-right:20px}.pp_content_container .pp_details{float:left;margin:10px 0 2px}
+.pp_description{display:none;margin:0}.pp_social{float:left;margin:7px 0 0}.pp_social .facebook{float:left;position:relative;top:-1px;margin-left:5px;width:55px;overflow:hidden}
+.pp_social .twitter{float:left}.pp_nav{clear:right;float:left;margin:3px 10px 0 0}.pp_nav p{float:left;margin:2px 4px}.pp_nav .pp_play,.pp_nav .pp_pause{float:left;margin-right:4px;text-indent:-10000px}
+a.pp_arrow_previous,a.pp_arrow_next{display:block;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}
+.pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000}.pp_gallery{display:none;left:50%;margin-top:-50px;position:absolute;z-index:10000}
+.pp_gallery div{float:left;overflow:hidden;position:relative}.pp_gallery ul{float:left;height:35px;position:relative;white-space:nowrap;margin:0 0 0 5px;padding:0}
+.pp_gallery ul a{border:1px rgba(0,0,0,0.5) solid;display:block;float:left;height:33px;overflow:hidden}.pp_gallery ul a img{border:0}
+.pp_gallery li{display:block;float:left;margin:0 5px 0 0;padding:0}
+.pp_gallery li.default a{background:url(images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;display:block;height:33px;width:50px}
+.pp_gallery .pp_arrow_previous,.pp_gallery .pp_arrow_next{margin-top:7px!important}a.pp_next{background:url(images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%}
+a.pp_previous{background:url(images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:left;height:100%;text-indent:-10000px;width:49%}
+a.pp_expand,a.pp_contract{cursor:pointer;display:none;height:20px;position:absolute;right:30px;text-indent:-10000px;top:10px;width:20px;z-index:20000}
+a.pp_close{position:absolute;right:0;top:0;display:block;line-height:22px;text-indent:-10000px}.pp_loaderIcon{display:block;height:24px;left:50%;position:absolute;top:50%;width:24px;margin:-12px 0 0 -12px}
+#pp_full_res{line-height:1!important}#pp_full_res .pp_inline{text-align:left}#pp_full_res .pp_inline p{margin:0 0 15px}div.ppt{color:#fff;display:none;font-size:17px;z-index:9999;margin:0 0 5px 15px}
+div.pp_default .pp_content,div.light_rounded .pp_content{background-color:#fff}div.pp_default #pp_full_res .pp_inline,div.light_rounded .pp_content .ppt,div.light_rounded #pp_full_res .pp_inline,div.light_square .pp_content .ppt,div.light_square #pp_full_res .pp_inline,div.facebook .pp_content .ppt,div.facebook #pp_full_res .pp_inline{color:#000}
+div.pp_default .pp_gallery ul li a:hover,div.pp_default .pp_gallery ul li.selected a,.pp_gallery ul a:hover,.pp_gallery li.selected a{border-color:#fff}
+div.pp_default .pp_details,div.light_rounded .pp_details,div.dark_rounded .pp_details,div.dark_square .pp_details,div.light_square .pp_details,div.facebook .pp_details{position:relative}
+div.light_rounded .pp_top .pp_middle,div.light_rounded .pp_content_container .pp_left,div.light_rounded .pp_content_container .pp_right,div.light_rounded .pp_bottom .pp_middle,div.light_square .pp_left,div.light_square .pp_middle,div.light_square .pp_right,div.light_square .pp_content,div.facebook .pp_content{background:#fff}
+div.light_rounded .pp_description,div.light_square .pp_description{margin-right:85px}
+div.light_rounded .pp_gallery a.pp_arrow_previous,div.light_rounded .pp_gallery a.pp_arrow_next,div.dark_rounded .pp_gallery a.pp_arrow_previous,div.dark_rounded .pp_gallery a.pp_arrow_next,div.dark_square .pp_gallery a.pp_arrow_previous,div.dark_square .pp_gallery a.pp_arrow_next,div.light_square .pp_gallery a.pp_arrow_previous,div.light_square .pp_gallery a.pp_arrow_next{margin-top:12px!important}
+div.light_rounded .pp_arrow_previous.disabled,div.dark_rounded .pp_arrow_previous.disabled,div.dark_square .pp_arrow_previous.disabled,div.light_square .pp_arrow_previous.disabled{background-position:0 -87px;cursor:default}
+div.light_rounded .pp_arrow_next.disabled,div.dark_rounded .pp_arrow_next.disabled,div.dark_square .pp_arrow_next.disabled,div.light_square .pp_arrow_next.disabled{background-position:-22px -87px;cursor:default}
+div.light_rounded .pp_loaderIcon,div.light_square .pp_loaderIcon{background:url(images/prettyPhoto/light_rounded/loader.gif) center center no-repeat}
+div.dark_rounded .pp_top .pp_middle,div.dark_rounded .pp_content,div.dark_rounded .pp_bottom .pp_middle{background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat}
+div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder{color:#c4c4c4}div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#fff}
+.pp_top,.pp_bottom{height:20px;position:relative}* html .pp_top,* html .pp_bottom{padding:0 20px}.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:20px}
+.pp_top .pp_middle,.pp_bottom .pp_middle{height:20px;left:20px;position:absolute;right:20px}* html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}
+.pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}.pp_fade,.pp_gallery li.default a img{display:none}
+
