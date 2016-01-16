@@ -12,13 +12,17 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/',
 			templateUrl: 'modules/core/views/index.html'
 		}).
-		state('project-single', {
-			url: '/project-single',
+		state('video-single', {
+			url: '/video-single',
 			templateUrl: 'modules/core/views/project-single.html'
 		}).
-		state('project', {
-			url: '/projects',
+		state('videos', {
+			url: '/videos',
 			templateUrl: 'modules/core/views/projects.html'
+		}).
+		state('about', {
+			url: '/about',
+			templateUrl: 'modules/core/views/about.html'
 		});
 	}
 ]);
