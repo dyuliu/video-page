@@ -138,168 +138,20 @@
 		            <li><a href="#latest-videos">Latest Videos</a></li>
 					<div class="clearfix"></div>
 		        </ul>
-		        <div id="latest-videos">
-				    <div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://www.youtube.com/watch?v=kIl-C8ZFJmg" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio1.png" width="202" height="152" alt="" />
+                <div id="latest-videos" ng-if="testDataList.length > 0">
+                    <div ng-repeat="videoItem in testDataList"
+                         class="grid4column" ng-class="{lastcolumn: $index % 4 == 3 }">
+                        <div class="portfolio-list">
+                        <div class="gallery-hover">
+                            <a href="/#!/video-single?id={{videoItem.id}}">
+                                <img src="images/demo-content/{{videoItem.imageName}}" width="202" height="152" alt="" />
+                            </a>
 						</div>
-						<h5><a href="/#!/video-single?id=1">Moto TF Ride Day</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="images/demo-content/large1.jpg" rel="prettyPhoto[gallery1]" title="" class="photo-icon">Photo</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio2.jpg" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Photo - Yosemite Park</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://vimeo.com/21120050" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio3.png" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Inner Secrets - Rear Wing</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column lastcolumn">
-						<div class="portfolio-list">
-							<iframe src="http://player.vimeo.com/video/6686768?title=0&amp;byline=0&amp;portrait=0" width='202' height='152' frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-						<h5><a href="/#!/video-single?id=1">Inline Video Example</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="clearfix"></div>
-
-					<div class="grid4column">
-
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://trailers.apple.com/movies/universal/despicableme/despicableme-tlr1_r640s.mov?width=640&height=360" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio4.png" width="202" height="152" alt="" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Quicktime Video</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="images/demo-content/large2.jpg" rel="prettyPhoto[gallery1]" title="" class="photo-icon">Photo</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio5.jpg" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Photo - Cold Desert</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://www.youtube.com/watch?feature=player_embedded&v=gxTuEC8RMzE" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio6.png" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Nitro Circus</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column lastcolumn">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://www.youtube.com/watch?v=P8FlmTlmdzc&feature=pyv" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio7.png" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Pacific Northwest</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="clearfix"></div>
-
-
-					<div class="grid4column">
-
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://vimeo.com/35083232" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio8.png" width="202" height="152" alt="" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">3 Days in Dubai</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://vimeo.com/35396305" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio9.jpg" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Yosemite HD</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://www.youtube.com/watch?v=qQ48NQjouoE" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio10.png" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Gymkhana 2.1</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="grid4column lastcolumn">
-						<div class="portfolio-list">
-						<div class="gallery-hover">
-							<div class="icon-container">
-								<a href="http://vimeo.com/34783883" rel="prettyPhoto[gallery1]" title="" class="video-icon">Video</a>
-								<a href="/#!/video-single?id=1" class="page-icon">Page</a>
-							</div>
-							<img src="images/demo-content/portfolio11.png" width="202" height="152" alt="" class="transparent-icon" />
-						</div>
-						<h5><a href="/#!/video-single?id=1">Marina Bay Sands Skypark</a></h5>
-						<p>by Mike on Jun 30 2011</p>
-						</div><!-- close .portfolio-list -->
-					</div>
-					<div class="clearfix"></div>
-
+                        <h5><a href="/#!/video-single?id={{videoItem.id}}">{{videoItem.title}}</a></h5>
+						<p>by Yanhong Wu on Jan 19 2016</p>
+                        </div>
+                    </div>
                     <div class="home-page-older"><a href="/#!/videos">All Entries &rsaquo;</a></div>
-
 				</div>
 		    </div><!-- close .tabs -->
 			
