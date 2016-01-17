@@ -1,132 +1,131 @@
 [
     {
-	id: 1,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 1,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 2,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 2,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 3,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 3,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 4,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 4,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 5,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 5,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 6,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 6,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 7,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 7,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 8,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 8,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 9,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 9,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 10,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 10,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 11,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 11,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 12,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 12,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 13,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 13,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 14,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 14,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 15,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 15,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     },
     {
-	id: 16,
-	title: 'Egoslider',
-	imageName: 'egoslider.png',
-	videoName: 'egoslider.mp4',
-	tag: ['graph'],
-	description: 'introduction to this video or your paper abstract'
+	"id": 16,
+	"title": "Egoslider",
+	"imageName": "egoslider.png",
+	"videoName": "egoslider.mp4",
+	"tag": ["graph"],
+	"description": "introduction to this video or your paper abstract"
     }
-
 ]
 

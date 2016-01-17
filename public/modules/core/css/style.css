@@ -178,7 +178,7 @@ p {padding-bottom:18px;}
 .bread-crumbs a:hover {color:#6b6b6b; text-decoration:none;}
 .bread-crumbs span {color:#a5a5a5;}
 .content-container {background:url(images/content-bg.png) top left no-repeat; width:952px; margin:0 auto; }
-.content-container-base, .content-container-base-pagination { height:45px; width:952px; overflow:hidden; margin:0 auto 25px auto;}
+.content-container-base, .content-container-base-pagination { height:45px; width:952px; overflow:hidden; margin:0 auto 0px auto;}
 .content-container-base-pagination, .home-page-older {font-weight:700; font-style:italic;}
 .ie7 .home-page-older {display:none !important;}
 .home-page-older {float:right; margin-bottom:-25px; position:relative; top:9px; font-size:13px;}
