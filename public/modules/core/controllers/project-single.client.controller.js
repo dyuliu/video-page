@@ -7,12 +7,28 @@ angular.module('core').controller('ProjectSingleController', ['$scope', 'communi
 		var mainPath = window.location.pathname;
 
 		var videoId = $location.search().id;
+        $scope.dataItem = {};
+
 		// configuration of videogular
+        $http.get('data/videoList.json').success(function(data) {
+            $scope.dataList = data;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id == videoId) {
+                    $scope.dataItem = data[i];
+                    $scope.config.sources = [
+                        {src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/mp4"},
+                        {src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/webm"},
+                        {src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/ogg"}
+                    ]
+                }
+            }
+        });
+
 		$scope.config = {
 			sources: [
-				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/group/1.mp4"), type: "video/mp4"},
-				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/group/1.mp4"), type: "video/webm"},
-				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/group/1.mp4"), type: "video/ogg"}
+				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/mp4"},
+				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/webm"},
+				{src: $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.dataItem['videoName']), type: "video/ogg"}
 			],
 			tracks: [
 				{

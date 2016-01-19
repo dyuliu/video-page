@@ -65,7 +65,8 @@
 		
 		
         <div class="bread-crumbs"><span>You are here:</span>  <a
-                href="/#!/">Home</a> &rsaquo; <a href="/#!/videos">Videos</a> &rsaquo; egoSlider</div>
+                href="/#!/">Home</a> &rsaquo; <a href="/#!/videos">Videos</a>
+            &rsaquo; {{dataItem.title}}</div>
 		
 		
 		<div class="content-container">
@@ -81,16 +82,12 @@
 				
 				
 					
-                <h1 class="page-title">egoSlider: Visual Analysis of Egocentric Network Evolution</h1>
+                <h1 class="page-title">{{dataItem.title}}</h1>
 				
 				<div class="project-single">
 					
 					
                     
-                    <!-- <video width="900" height="510" controls preload="none">
-                        <source src="videos/egoslider.mp4" type="video/mp4">
-                    </video> -->
-
                     <videogular vg-player-ready="vgPlayerReady($API)" vg-theme="config.theme" vg-update-time="vgUpdateTime($currentTime)">
 						<vg-media vg-src="config.sources" vg-tracks="config.tracks">
 						</vg-media>
@@ -137,38 +134,13 @@
                     <div class="portfolio-details">by <a href="#">Yanhong Wu</a>
                         on <a href="#">Jan 14, 2016</a></div>
 
-					<p>Ego-network, which represents relationships between a
-                    specific individual, i.e., the ego, and people connected to
-                    it, i.e., alters, is a critical target to study in social
-                    network analysis. Evolutionary patterns of ego-networks
-                    along time provide huge insights to many domains such as
-                    sociology, anthropology, and psychology. However, the
-                    analysis of dynamic ego-networks remains challenging due to
-                    its complicated time-varying graph structures, for example:
-                    alters come and leave, ties grow stronger and fade away, and
-                    alter communities merge and split. Most of the existing
-                    dynamic graph visualization techniques mainly focus on
-                    topological changes of the entire network, which is not
-                    adequate for egocentric analytical tasks. In this paper, we
-                    present egoSlider, a visual analysis system for exploring
-                    and comparing dynamic ego-networks. egoSlider provides a
-                    holistic picture of the data through multiple interactively
-                    coordinated views, revealing ego-network evolutionary
-                    patterns at three different layers: a macroscopic level for
-                    summarizing the entire ego-network data, a mesoscopic level
-                    for overviewing specific individuals’ ego-network
-                    evolutions, and a microscopic level for displaying detailed
-                    temporal information of egos and their alters. We
-                    demonstrate the effectiveness of egoSlider with a usage
-                    scenario with the DBLP publication records. Also, a
-                    controlled user study indicates that in general egoSlider
-                    outperforms a baseline visualization of dynamic networks for
-                    completing egocentric analytical tasks.</p>
+                    <p>{{dataItem.description}}</p>
 					
 					<div class="clearfix"></div>
 					<hr/>
 					
-                    <div class="portfolio-tags"><strong>Tags</strong>: <a href="#">graph</a></div><!-- close .portfolio-tags -->
+                    <div class="portfolio-tags"><strong>Tags</strong>: <a
+                         href="#" ng-repeat="videoTag in dataItem.tag">{{videoTag}}</a></div><!-- close .portfolio-tags -->
 					
 					<div class="clearfix"></div>
 					

@@ -5,127 +5,39 @@
 	"imageName": "egoslider.png",
 	"videoName": "egoslider.mp4",
 	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
+	"description": "Ego-network, which represents relationships between a specific individual, i.e., the ego, and people connected to it, i.e., alters, is a critical target to study in social network analysis. Evolutionary patterns of ego-networks along time provide huge insights to many domains such as sociology, anthropology, and psychology. However, the analysis of dynamic ego-networks remains challenging due to its complicated time-varying graph structures, for example: alters come and leave, ties grow stronger and fade away, and alter communities merge and split. Most of the existing dynamic graph visualization techniques mainly focus on topological changes of the entire network, which is not adequate for egocentric analytical tasks. In this paper, we present egoSlider, a visual analysis system for exploring and comparing dynamic ego-networks. egoSlider provides a holistic picture of the data through multiple interactively coordinated views, revealing ego-network evolutionary patterns at three different layers: a macroscopic level for summarizing the entire ego-network data, a mesoscopic level for overviewing specific individuals’ ego-network evolutions, and a microscopic level for displaying detailed temporal information of egos and their alters. We demonstrate the effectiveness of egoSlider with a usage scenario with the DBLP publication records. Also, a controlled user study indicates that in general egoSlider outperforms a baseline visualization of dynamic networks for completing egocentric analytical tasks."
     },
     {
-	"id": 2,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
+	  "id": 2,
+	  "title": "AmbiguityVis: Visualization of Ambiguity in Graph Layouts",
+	  "imageName": "AmbiguityVis.png",
+	  "videoName": "AmbiguityVis.mp4",
+	  "tag": ["graph"],
+	  "description": "Node-link diagrams provide an intuitive way to explore networks and have inspired a large number of automated graph layout strategies that optimize aesthetic criteria. However, any particular drawing approach cannot fully satisfy all these criteria simultaneously, producing drawings with visual ambiguities that can impede the understanding of network structure. To bring attention to these potentially problematic areas present in the drawing, this paper presents a technique that highlights common types of visual ambiguities: ambiguous spatial relationships between nodes and edges, visual overlap between community structures, and ambiguity in edge bundling and metanodes. Metrics, including newly proposed metrics for abnormal edge lengths, visual overlap in community structures and node/edge aggregation, are proposed to quantify areas of ambiguity in the drawing. These metrics and others are then displayed using a heatmap-based visualization that provides visual feedback to developers of graph drawing and visualization approaches, allowing them to quickly identify misleading areas. The novel metrics and the heatmap-based visualization allow a user to explore ambiguities in graph layouts from multiple perspectives in order to make reasonable graph layout choices. The effectiveness of the technique is demonstrated through case studies and expert reviews."
     },
     {
-	"id": 3,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
+      "id": 3,
+      "title": "VisMOOC",
+      "imageName": "vismooc.png",
+      "videoName": "vismooc.mp4",
+      "tag": ["mooc"],
+      "description": "Visualizing Video Clickstream Data from Massive Open Online Courses Massive Open Online Courses (MOOCs) platforms are becoming increasingly popular in recent years. With thousands of students watching course videos, enormous amounts of clickstream data are produced and recorded by the MOOCs platforms for each course. Such large-scale data provide a great opportunity for instructors and educational analysts to gain insight into online learning behaviors on an unprecedented scale. Nevertheless, the growing scale and unique characteristics of the data also pose a special challenge for effective data analysis. In this paper, we introduce VisMOOC, a visual analytic system to help analyze user learning behaviors by using video clickstream data from MOOC platforms. We work closely with the instructors of two Coursera courses to understand the data and collect task analysis requirements. A complete usercentered design process is further employed to design and develop VisMOOC. It includes three main linked views: the List View to show an overview of the clickstream differences among course videos, the Content-based View to show temporal variations in the total number of each type of click action along the video timeline, the Dashboard View to show various statistical information such as demographic information and temporal information. We conduct two case studies with the instructors to demonstrate the usefulness of VisMOOC and discuss new findings on learning behaviors."
     },
     {
-	"id": 4,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
+      "id": 4,
+      "title": "PeakVizor",
+      "imageName": "peakvizor.png",
+      "videoName": "peakvizor.mp4",
+      "tag": ["mooc"],
+      "description": "PeakVizor: Visual Analytics of Peaks in Video Clickstreams from Massive Open Online Courses Massive open online courses (MOOCs) aim to facilitate open-access and massive-participation education. These courses have attracted millions of learners recently. At present, most MOOC platforms record the web log data of learner interactions with course videos. Such large amounts of multivariate data pose a new challenge in terms of analyzing online learning behaviors. Previous studies have mainly focused on the aggregate behaviors of learners from a summative view; however, few attempts have been made to conduct a detailed analysis of such behaviors. To determine complex learning patterns in MOOC video interactions, this paper introduces a comprehensive visualization system called PeakVizor. This system enables course instructors and education experts to analyze the “peaks” or the video segments that generate numerous clickstreams. The system features three views at different levels: the overview with glyphs to display valuable statistics regarding the peaks detected; the flow view to present spatio-temporal information regarding the peaks; and the correlation view to show the correlation between different learner groups and the peaks. Case studies and interviews conducted with domain experts have demonstrated the usefulness and effectiveness of PeakVizor, and new findings about learning behaviors in MOOC platforms have been reported."
     },
     {
-	"id": 5,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 6,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 7,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 8,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 9,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 10,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 11,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 12,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 13,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 14,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 15,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
-    },
-    {
-	"id": 16,
-	"title": "Egoslider",
-	"imageName": "egoslider.png",
-	"videoName": "egoslider.mp4",
-	"tag": ["graph"],
-	"description": "introduction to this video or your paper abstract"
+      "id": 5,
+      "title": "Pulse of HKUST",
+      "imageName": "pulse.png",
+      "videoName": "pulse.mp4",
+      "tag": ["2525"],
+      "description": "Pulse of HKUST This is a preview video for the HKUST 25/25 proposal. Some of the materials used and edited include the promotion videos from HKUST youtube channels and some visualization demos from the Internet. BGM by Hiroyuki Sawano. Thank you! For more details, please refer to our proposal."
     }
 ]
 
