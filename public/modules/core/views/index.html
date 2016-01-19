@@ -72,7 +72,7 @@
 				<div class="showcase-slide" ng-repeat="teaserData in teaserDataList">
 					<div class="showcase-content">
 						<div class="slider-left">
-                            <video width="560" height="315" controls preload="none">
+                            <video width="560" height="315" controls preload="none" poster="{{teaserData.imageURL}}">
                                 <source ng-src="{{teaserData.videoURL}}" type="video/mp4">
                             </video>
 						</div>

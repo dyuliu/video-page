@@ -10,6 +10,7 @@ angular.module('core').controller('IndexController', ['$scope', '$http', '$sce',
             $scope.teaserDataList = data.slice(0, 3);
             for (var i = 0; i < $scope.teaserDataList.length; i++) {
                 $scope.teaserDataList[i].videoURL = $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.teaserDataList[i].videoName);
+                $scope.teaserDataList[i].imageURL = $sce.trustAsResourceUrl("http://vis.cse.ust.hk/videos/vislab/" + $scope.teaserDataList[i].imageName);
                 $scope.teaserDataList[i].description = $scope.teaserDataList[i].description.split(" ").splice(0,40).join(" ") + "...";
             }
             $scope.firstTeaser = $scope.teaserDataList[0];
