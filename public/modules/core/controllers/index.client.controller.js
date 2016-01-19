@@ -5,7 +5,7 @@ angular.module('core').controller('IndexController', ['$scope', '$http', '$sce',
     function($scope, $http, $sce, $timeout) {
         $scope.testDataList = [];
 
-        $http.get('data/videoList.json').success(function(data) {
+        $http.get('./data/videoList.json').success(function(data) {
             $scope.testDataList = data.slice(0, 12);
             $scope.teaserDataList = data.slice(0, 3);
             for (var i = 0; i < $scope.teaserDataList.length; i++) {
