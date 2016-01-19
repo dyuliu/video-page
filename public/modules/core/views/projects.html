@@ -79,7 +79,7 @@
                 <h1 class="page-title">Videos</h1>
 				<p class="page-description"></p>
 				
-                <div ng-repeat="videoItem in curDataList" class="grid3column" ng-class="{lastcolumn: $index % 3 == 2 }">
+                <div ng-repeat-start="videoItem in curDataList" class="grid3column" ng-class="{lastcolumn: $index % 3 == 2 }">
 					<div class="portfolio-list">
 					<span class="gallery-hover">
                         <a href="/#!/video-single?id={{videoItem.id}}">
@@ -90,6 +90,7 @@
 					<p>by Yanhong on January 14, 2016</p>
 					</div><!-- close .portfolio-list -->
 				</div>
+                <div ng-repeat-end ng-if="$index % 3 == 2" class="clearfix"></div>
 			
 			</div><!-- close .page-content -->
 			
